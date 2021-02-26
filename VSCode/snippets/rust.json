@@ -1,0 +1,61 @@
+{
+  // Place your snippets for rust here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Actix Web Server": {
+    "prefix": "actxw",
+    "body": [
+      "use actix_web::{get, middleware::Logger, post, web, App, HttpResponse, HttpServer, Responder};",
+      "use env_logger::Env;",
+      "",
+      "#[get(\"/\")]",
+      "async fn hello() -> impl Responder {",
+      "\tHttpResponse::Ok().body(\"Hello world!\")",
+      "}",
+      "",
+      "#[post(\"/echo\")]",
+      "async fn echo(req_body: String) -> impl Responder {",
+      "\tHttpResponse::Ok().body(req_body)",
+      "}",
+      "",
+      "async fn manual_hello() -> impl Responder {",
+      "\tHttpResponse::Ok().body(\"Hey there!\")",
+      "}",
+      "",
+      "#[actix_web::main]",
+      "async fn main() -> std::io::Result<()> {",
+      "env_logger::Builder::from_env(Env::default().default_filter_or(\"info\")).init();",
+      "",
+      "HttpServer::new(|| {",
+      "\tApp::new()",
+      "\t\t.wrap(Logger::default())",
+      "\t\t.service(hello)",
+      "\t\t.service(echo)",
+      "\t\t.route(\"/hey\", web::get().to(manual_hello))",
+      "})",
+      ".bind(\"127.0.0.1:8080\")?",
+      ".run()",
+      ".await",
+      "}"
+    ],
+    "description": "Actix web starter pack"
+  },
+  "Main": {
+    "prefix": "main",
+    "body": ["fn main() {", "\t$0", "}"]
+  },
+  "Print line": {
+    "prefix": "print",
+    "body": ["println!(\"$0\");"]
+  }
+}

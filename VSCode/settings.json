@@ -1,0 +1,115 @@
+{
+  "workbench.startupEditor": "none",
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "blade": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.tree.indent": 15,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "indentRainbow.colors": [
+    "rgba(144, 144, 255, 0.1)",
+    "rgba(255,255,64,0.07)",
+    "rgba(237,30,219,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)",
+    "rgba(168,30,237,0.07)",
+    "rgba(237,127,30,0.07)"
+  ],
+  "indentRainbow.errorColor": "rgba(226,132,24,0.2)",
+  "python.pythonPath": "/usr/local/bin/python3.7",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prolog.executablePath": "/usr/local/bin/swipl",
+  "[prolog]": {
+    "editor.defaultFormatter": "arthurwang.vsc-prolog"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "onecentlin.laravel-blade"
+  },
+  "beautify.language": {
+    "html": ["blade", "html"]
+  },
+  "[lisp]": {
+    "editor.defaultFormatter": "Sir2B.lispbeautifier"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[ruby]": { "editor.defaultFormatter": "rebornix.ruby" },
+  "ruby.format": "rubocop",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust"
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.tabSize": 2,
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.files.associations": {
+    "*.cnf": "settings",
+    "*.config.ts": "settings",
+    "*.uxf": "exe",
+    "mod.rs": "settings"
+  },
+  "material-icon-theme.folders.associations": {
+    "handlers": "controller",
+    "migrations": "database",
+    "target": "dist",
+    "context": "redux-store",
+    "reducers": "redux-reducer",
+    "actions": "redux-actions",
+    "types": "typescript"
+  },
+  "licenser.author": "Daniel T. Rodrigues",
+  "licenser.license": "MIT",
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.openDebug": "neverOpen",
+  "comments.openPanel": "neverOpen",
+  "editor.suggestSelection": "first",
+  "python.showStartPage": false,
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "workbench.colorTheme": "Dracula",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editorAssociations": [],
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": "{{put-password-here}}"
+    }
+  ],
+  "php.validate.executablePath": "/usr/bin/php"
+}

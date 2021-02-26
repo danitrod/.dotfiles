@@ -1,0 +1,20 @@
+{
+  "Util typescript function": {
+    "prefix": "utf",
+    "body": ["export const $TM_FILENAME_BASE = ($1) => {", "", "};", ""],
+    "description": "Exports an util typescript function"
+  },
+  "React Native Stylesheet": {
+    "prefix": "rns",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({",
+      "\t$1",
+      "});",
+      "",
+      "export default styles;",
+      ""
+    ]
+  }
+}

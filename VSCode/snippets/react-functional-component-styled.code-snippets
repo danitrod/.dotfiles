@@ -1,0 +1,18 @@
+{
+	"React Functional Component with styles.module.css": {
+		"scope": "javascript,typescript",
+		"prefix": "rafcs",
+		"body": [
+			"import React from 'react';",
+			"import styles from './styles.module.css';",
+			"",
+			"const ${1:$TM_FILENAME_BASE} = () => {",
+			"\treturn <div></div>;",
+			"};",
+			"",
+			"export default $1;",
+			""
+		],
+		"description": "Log output to console"
+	}
+}
