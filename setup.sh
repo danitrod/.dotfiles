@@ -33,7 +33,9 @@ ln -s $(pwd)/.vim /Users/$(whoami)/.vim
 # Copy zsh themes
 cp -r oh-my-zsh/themes/* /Users/$(whoami)/.oh-my-zsh/themes 
 
-# Install vscode extensions
+
+
+# Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
 code --install-extension alexcvzz.vscode-sqlite
 code --install-extension arthurwang.vsc-prolog
@@ -86,4 +88,3 @@ code --install-extension vscodevim.vim
 code --install-extension wingrunr21.vscode-ruby
 code --install-extension xaver.clang-format
 code --install-extension ymotongpoo.licenser
-
