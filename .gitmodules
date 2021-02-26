@@ -1,0 +1,12 @@
+[submodule ".vim/pack/themes/start/dracula"]
+	path = .vim/pack/themes/start/dracula
+	url = https://github.com/dracula/vim.git
+[submodule ".vim/plugged/nerdcommenter"]
+	path = .vim/plugged/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/plugged/vim-jsx-pretty"]
+	path = .vim/plugged/vim-jsx-pretty
+	url = https://github.com/maxmellon/vim-jsx-pretty.git
+[submodule ".vim/plugged/yats.vim"]
+	path = .vim/plugged/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
