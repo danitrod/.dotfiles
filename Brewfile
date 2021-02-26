@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "tektoncd/tools"
 brew "gcc"
@@ -40,3 +41,6 @@ cask "anaconda"
 cask "docker"
 cask "hyper"
 cask "joplin"
+cask "visual-studio-code"
+cask "font-fira-code"
+

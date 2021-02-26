@@ -68,7 +68,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,5 +143,9 @@ source /Users/daniel/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plug
 source /Users/daniel/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /Users/daniel/.zsh/completion.zsh
 source /Users/daniel/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/daniel/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 alias ls='ls -G'
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
