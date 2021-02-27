@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These are my dotfiles. They include setup for installing runtimes, desktop applications, command line tools, themes and plugins I use.
+These are my dotfiles. The repo includes setup for installing runtimes, desktop applications, command line tools, themes and plugins I use.
 
 To get started, clone this repo and all its submodules into your home folder and cd into it.
 
