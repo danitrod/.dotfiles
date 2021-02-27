@@ -1,6 +1,7 @@
 ## Adds commands to install all your vscode extensions to the setup script
 
 SETUP_SCRIPT_PATH="/Users/$(whoami)/.dotfiles/setup.sh"
+set -e
 
 # Remove previous extension install commands from setup
 sed -i .sed '/# Install VSCode extensions/d' $SETUP_SCRIPT_PATH
