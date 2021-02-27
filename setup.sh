@@ -20,6 +20,12 @@ brew bundle
 # Install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install IBM Cloud CLI
+which -s ibmcloud
+if [[ $? != 0 ]] ; then
+	curl -sL https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/linux-installer/idt-installer | bash
+fi
+
 # Symlink config files 
 rm /Users/$(whoami)/Library/Application\ Support/Code/User/settings.json
 ln -s $(pwd)/VSCode/settings.json /Users/$(whoami)/Library/Application\ Support/Code/User/settings.json
