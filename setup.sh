@@ -1,3 +1,10 @@
+# Abort if there are any errors
+echo "Starting dotfiles setup. Setup will abort if there are any errors along the way."
+set -e
+
+# Install xcode cli tools
+xcode-select --install
+
 # Install Homebrew
 which -s brew
 if [[ $? != 0 ]] ; then
@@ -30,10 +37,16 @@ ln -s $(pwd)/.vimrc /Users/$(whoami)/.vimrc
 rm -rf /Users/$(whoami)/.vim
 ln -s $(pwd)/.vim /Users/$(whoami)/.vim
 
+rm /Users/$(whoami)/.hyper.js
+ln -s $(pwd)/.hyper.js /Users/$(whoami)/.hyper.js
+
 # Copy zsh themes
-cp -r oh-my-zsh/themes/* /Users/$(whoami)/.oh-my-zsh/themes 
+cp -r oh-my-zsh/themes/* /Users/$(whoami)/.oh-my-zsh/themes
 
-
+# Install cargo tools
+cargo install cargo-edit
+cargo install diesel_cli
+cargo install cargo-watch
 
 # Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
