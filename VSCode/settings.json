@@ -111,5 +111,6 @@
       "password": "{{put-password-here}}"
     }
   ],
-  "php.validate.executablePath": "/usr/bin/php"
+  "php.validate.executablePath": "/usr/bin/php",
+  "workbench.sideBar.location": "right"
 }
