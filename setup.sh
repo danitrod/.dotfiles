@@ -1,6 +1,4 @@
-# Abort if there are any errors
-echo "Starting dotfiles setup. Setup will abort if there are any errors along the way."
-set -e
+echo "Starting dotfiles setup."
 
 # Install xcode cli tools
 xcode-select --install
