@@ -9,6 +9,7 @@
   "dependencies": {
     "hypercwd": "latest",
     "hyper-search": "latest",
-    "hyper-pane": "latest"
+    "hyper-pane": "latest",
+    "hyper-dracula": "latest"
   }
 }

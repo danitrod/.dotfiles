@@ -69,6 +69,7 @@
   "[svg]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
+  "[nginx]": { "editor.defaultFormatter": "raynigon.nginx-formatter" },
   "[ruby]": { "editor.defaultFormatter": "rebornix.ruby" },
   "ruby.format": "rubocop",
   "[rust]": {
@@ -112,5 +113,6 @@
     }
   ],
   "php.validate.executablePath": "/usr/bin/php",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "redhat.telemetry.enabled": false
 }

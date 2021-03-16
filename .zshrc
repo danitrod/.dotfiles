@@ -118,6 +118,7 @@ alias cb="cargo build"
 alias cr="cargo run"
 alias ct="cargo test"
 alias cw="cargo watch -x 'run'"
+alias kb="kubectl"
 alias rdev="RUST_LOG=debug cargo watch -x 'run'"
 
 # tabtab source for electron-forge package
