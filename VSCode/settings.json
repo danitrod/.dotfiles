@@ -73,7 +73,7 @@
   "[ruby]": { "editor.defaultFormatter": "rebornix.ruby" },
   "ruby.format": "rubocop",
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust"
+    "editor.defaultFormatter": "matklad.rust-analyzer"
   },
   "C_Cpp.updateChannel": "Insiders",
   "editor.tabSize": 2,
@@ -91,7 +91,8 @@
     "context": "redux-store",
     "reducers": "redux-reducer",
     "actions": "redux-actions",
-    "types": "typescript"
+    "types": "typescript",
+    "composables": "vue"
   },
   "licenser.author": "Daniel T. Rodrigues",
   "licenser.license": "MIT",
@@ -103,7 +104,12 @@
   "python.defaultInterpreterPath": "/usr/bin/python3",
   "workbench.colorTheme": "Dracula",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.editorAssociations": [],
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
   "mssql.connections": [
     {
       "server": "{{put-server-name-here}}",

@@ -97,29 +97,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ic="ibmcloud"
-alias gpuom="git push -u origin main"
-alias gpuo="git push -u origin"
-alias glom="git pull origin main"
-alias yb="yarn build"
-alias ybp="yarn build-prod"
-alias yd="yarn dev"
-alias yios="yarn ios"
-alias grao="git remote add origin"
-alias rmgit="rm -rf .git"
-alias dpa="docker ps -a"
-alias dps="docker ps"
-alias yw="yarn watch"
-alias ys="yarn start"
-alias yt="yarn test"
-alias grso="git remote show origin"
-alias ginit="git init"
 alias cb="cargo build"
 alias cr="cargo run"
 alias ct="cargo test"
 alias cw="cargo watch -x 'run'"
+alias dpa="docker ps -a"
+alias dps="docker ps"
+alias grso="git remote show origin"
+alias ginit="git init"
+alias gpuom="git push -u origin main"
+alias gpuo="git push -u origin"
+alias glom="git pull origin main"
+alias grao="git remote add origin"
+alias ic="ibmcloud"
+alias ilogin="ibmcloud login --sso"
 alias kb="kubectl"
 alias rdev="RUST_LOG=debug cargo watch -x 'run'"
+alias rmgit="rm -rf .git"
+alias yb="yarn build"
+alias ybp="yarn build-prod"
+alias yd="yarn dev"
+alias yios="yarn ios"
+alias yw="yarn watch"
+alias ys="yarn start"
+alias yt="yarn test"
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
@@ -149,4 +150,8 @@ alias ls='ls -G'
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# Node Version Manager
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 

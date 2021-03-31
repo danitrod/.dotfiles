@@ -58,6 +58,7 @@ code --install-extension alexcvzz.vscode-sqlite
 code --install-extension arthurwang.vsc-prolog
 code --install-extension bbenoist.vagrant
 code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension bradlc.vscode-tailwindcss
 code --install-extension bungcip.better-toml
 code --install-extension cjhowe7.laravel-blade
 code --install-extension codingyu.laravel-goto-view
@@ -67,6 +68,7 @@ code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension flowtype.flow-for-vscode
+code --install-extension formulahendry.auto-close-tag
 code --install-extension Gimly81.matlab
 code --install-extension golang.go
 code --install-extension GrapeCity.gc-excelviewer
@@ -74,6 +76,7 @@ code --install-extension GraphQL.vscode-graphql
 code --install-extension HookyQR.beautify
 code --install-extension IBM.ibmcloud-account
 code --install-extension KevinRose.vsc-python-indent
+code --install-extension matklad.rust-analyzer
 code --install-extension mattn.Lisp
 code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
@@ -95,7 +98,6 @@ code --install-extension redhat.vscode-commons
 code --install-extension redhat.vscode-tekton-pipelines
 code --install-extension redhat.vscode-xml
 code --install-extension redhat.vscode-yaml
-code --install-extension rust-lang.rust
 code --install-extension Sir2B.lispbeautifier
 code --install-extension stef-k.laravel-goto-controller
 code --install-extension stkb.rewrap
