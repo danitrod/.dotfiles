@@ -12,8 +12,10 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    // "source.organizeImports": true
+    "source.fixAll.eslint": true
   },
+  "eslint.validate": ["typescript", "javascript"],
   "editor.formatOnSave": true,
   "editor.fontLigatures": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -120,5 +122,6 @@
   ],
   "php.validate.executablePath": "/usr/bin/php",
   "workbench.sideBar.location": "right",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "markdown-pdf.displayHeaderFooter": false
 }

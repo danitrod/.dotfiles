@@ -54,6 +54,8 @@ cargo install cargo-watch
 
 # Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
+code --install-extension aaron-bond.better-comments
+code --install-extension ahmadalli.vscode-nginx-conf
 code --install-extension alexcvzz.vscode-sqlite
 code --install-extension arthurwang.vsc-prolog
 code --install-extension bbenoist.vagrant
@@ -67,8 +69,8 @@ code --install-extension dracula-theme.theme-dracula
 code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
+code --install-extension ExodiusStudios.comment-anchors
 code --install-extension flowtype.flow-for-vscode
-code --install-extension formulahendry.auto-close-tag
 code --install-extension Gimly81.matlab
 code --install-extension golang.go
 code --install-extension GrapeCity.gc-excelviewer
@@ -82,6 +84,7 @@ code --install-extension mikestead.dotenv
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-mssql.mssql
 code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-vscode.cpptools
 code --install-extension mtxr.sqltools
@@ -92,18 +95,20 @@ code --install-extension onecentlin.laravel-blade
 code --install-extension oshri6688.javascript-test-runner
 code --install-extension PKief.material-icon-theme
 code --install-extension prui.template-generator-vscode
+code --install-extension raynigon.nginx-formatter
 code --install-extension rebornix.prolog
 code --install-extension rebornix.ruby
 code --install-extension redhat.vscode-commons
-code --install-extension redhat.vscode-tekton-pipelines
 code --install-extension redhat.vscode-xml
 code --install-extension redhat.vscode-yaml
+code --install-extension shanoor.vscode-nginx
 code --install-extension Sir2B.lispbeautifier
 code --install-extension stef-k.laravel-goto-controller
 code --install-extension stkb.rewrap
+code --install-extension TakumiI.markdowntable
 code --install-extension theumletteam.umlet
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
 code --install-extension wingrunr21.vscode-ruby
 code --install-extension xaver.clang-format
-code --install-extension ymotongpoo.licenser
+code --install-extension yzane.markdown-pdf
