@@ -51,6 +51,10 @@ cargo install cargo-watch
 
 # Fish setup
 fish aliases.fish
+fish plugins.fish
+
+# Setup NVM
+mkdir ~/.nvm
 
 # Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
