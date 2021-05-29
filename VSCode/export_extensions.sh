@@ -1,6 +1,6 @@
 ## Adds commands to install all your vscode extensions to the setup script
 
-SETUP_SCRIPT_PATH="/Users/$(whoami)/.dotfiles/setup.sh"
+SETUP_SCRIPT_PATH="/Users/$(whoami)/.dotfiles/VSCode/install_extensions.sh"
 set -e
 
 # Remove previous extension install commands from setup
