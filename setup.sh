@@ -15,9 +15,6 @@ fi
 # Install brew packages
 brew bundle
 
-# Install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Install IBM Cloud CLI
 which -s ibmcloud
 if [[ $? != 0 ]] ; then
@@ -25,12 +22,12 @@ if [[ $? != 0 ]] ; then
 fi
 
 # Symlink config files 
-rm /Users/$(whoami)/Library/Application\ Support/Code/User/settings.json
-ln -s $(pwd)/VSCode/settings.json /Users/$(whoami)/Library/Application\ Support/Code/User/settings.json
-rm /Users/$(whoami)/Library/Application\ Support/Code/User/keybindings.json
-ln -s $(pwd)/VSCode/keybindings.json /Users/$(whoami)/Library/Application\ Support/Code/User/keybindings.json
-rm -rf /Users/$(whoami)/Library/Application\ Support/Code/User/snippets
-ln -s $(pwd)/VSCode/snippets/ /Users/$(whoami)/Library/Application\ Support/Code/User
+rm "/Users/$(whoami)/Library/Application Support/Code/User/settings.json"
+ln -s $(pwd)/VSCode/settings.json "/Users/$(whoami)/Library/Application Support/Code/User/settings.json"
+rm "/Users/$(whoami)/Library/Application Support/Code/User/keybindings.json"
+ln -s $(pwd)/VSCode/keybindings.json "/Users/$(whoami)/Library/Application Support/Code/User/keybindings.json"
+rm -rf "/Users/$(whoami)/Library/Application Support/Code/User/snippets"
+ln -s $(pwd)/VSCode/snippets/ "/Users/$(whoami)/Library/Application Support/Code/User"
 
 rm /Users/$(whoami)/.zshrc
 ln -s $(pwd)/.zshrc /Users/$(whoami)/.zshrc
@@ -44,13 +41,16 @@ ln -s $(pwd)/.vim /Users/$(whoami)/.vim
 rm /Users/$(whoami)/.hyper.js
 ln -s $(pwd)/.hyper.js /Users/$(whoami)/.hyper.js
 
-# Copy zsh themes
-cp -r oh-my-zsh/themes/* /Users/$(whoami)/.oh-my-zsh/themes
+rm /Users/$(whoami)/.config/starship.toml
+ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
 
 # Install cargo tools
 cargo install cargo-edit
 cargo install diesel_cli
 cargo install cargo-watch
+
+# Fish setup
+fish aliases.fish
 
 # Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
@@ -92,7 +92,6 @@ code --install-extension NuclleaR.vscode-extension-auto-import
 code --install-extension octref.vetur
 code --install-extension oderwat.indent-rainbow
 code --install-extension onecentlin.laravel-blade
-code --install-extension oshri6688.javascript-test-runner
 code --install-extension PKief.material-icon-theme
 code --install-extension prui.template-generator-vscode
 code --install-extension raynigon.nginx-formatter
@@ -108,7 +107,6 @@ code --install-extension stkb.rewrap
 code --install-extension TakumiI.markdowntable
 code --install-extension theumletteam.umlet
 code --install-extension vscode-icons-team.vscode-icons
-code --install-extension vscodevim.vim
 code --install-extension wingrunr21.vscode-ruby
 code --install-extension xaver.clang-format
 code --install-extension yzane.markdown-pdf

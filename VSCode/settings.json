@@ -10,7 +10,7 @@
   "emmet.triggerExpansionOnTab": true,
   "workbench.tree.indent": 15,
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.codeActionsOnSave": {
     // "source.organizeImports": true
     "source.fixAll.eslint": true

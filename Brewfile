@@ -7,6 +7,8 @@ tap "tektoncd/tools"
 brew "sqlite"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -21,6 +23,8 @@ brew "istioctl"
 brew "kubernetes-cli"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Open source relational database management system
+brew "mysql"
 # Platform built on V8 to build network applications
 brew "node"
 # Manage multiple Node.js versions
@@ -53,7 +57,6 @@ cask "discord"
 cask "docker"
 # Web browser
 cask "firefox"
-cask "font-fira-code"
 # Web browser
 cask "google-chrome"
 # Terminal built on web technologies
