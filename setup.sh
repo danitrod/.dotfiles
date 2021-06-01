@@ -56,6 +56,8 @@ cargo install cargo-watch
 cargo install trunk wasm-bindgen-cli
 
 # Fish setup
+rm /Users/$(whoami)/.config/fish/config.fish
+ln -s $(pwd)/config.fish /Users/$(whoami)/.config/fish/
 fish fish/aliases.fish
 fish fish/plugins.fish
 

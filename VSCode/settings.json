@@ -38,7 +38,6 @@
     "rgba(237,127,30,0.07)"
   ],
   "indentRainbow.errorColor": "rgba(226,132,24,0.2)",
-  "python.pythonPath": "/usr/local/bin/python3.7",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
   "[python]": {
@@ -103,7 +102,7 @@
   "comments.openPanel": "neverOpen",
   "editor.suggestSelection": "first",
   "python.showStartPage": false,
-  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "workbench.colorTheme": "Dracula",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.editorAssociations": [
