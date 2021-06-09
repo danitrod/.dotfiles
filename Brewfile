@@ -65,6 +65,8 @@ cask "insomnia"
 cask "joplin"
 # Clipboard manager
 cask "maccy"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Team communication and collaboration software
