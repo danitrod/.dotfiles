@@ -5,6 +5,8 @@ tap "homebrew/core"
 tap "tektoncd/tools"
 # Command-line interface for SQLite
 brew "sqlite"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -65,6 +67,8 @@ cask "insomnia"
 cask "joplin"
 # Clipboard manager
 cask "maccy"
+# Full TeX Live distribution with GUI applications
+cask "mactex"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Open-source software for live streaming and screen recording
