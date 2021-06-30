@@ -21,6 +21,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
@@ -122,5 +123,6 @@
   "redhat.telemetry.enabled": false,
   "markdown-pdf.displayHeaderFooter": false,
   "latex-workshop.view.pdf.viewer": "tab",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "editor.inlineSuggest.enabled": true
 }

@@ -79,5 +79,9 @@ cask "slack"
 cask "telegram"
 # Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
 # Desktop client for WhatsApp
 cask "whatsapp"
+# Video communication and virtual meeting platform
+cask "zoom"
