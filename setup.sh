@@ -53,7 +53,7 @@ cargo install cargo-edit
 cargo install diesel_cli
 cargo install cargo-watch
 # WASM
-cargo install trunk wasm-bindgen-cli
+cargo install trunk wasm-bindgen-cli wasm-pack
 
 # Fish setup
 rm /Users/$(whoami)/.config/fish/config.fish

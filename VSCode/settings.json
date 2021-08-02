@@ -25,6 +25,9 @@
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
   "[json]": {
     "editor.tabSize": 2
   },
@@ -70,6 +73,9 @@
   },
   "[svg]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
   "[nginx]": { "editor.defaultFormatter": "raynigon.nginx-formatter" },
   "[ruby]": { "editor.defaultFormatter": "rebornix.ruby" },
@@ -123,6 +129,6 @@
   "redhat.telemetry.enabled": false,
   "markdown-pdf.displayHeaderFooter": false,
   "latex-workshop.view.pdf.viewer": "tab",
-  "window.zoomLevel": 1,
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "window.zoomLevel": 1
 }
