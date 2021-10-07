@@ -2,13 +2,20 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "mongodb/brew"
 tap "tektoncd/tools"
 # Command-line interface for SQLite
 brew "sqlite"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Cross-platform make
+brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Banner-like program prints strings as ASCII art
+brew "figlet"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # GNU compiler collection
@@ -24,7 +31,11 @@ brew "imagemagick"
 # Istio configuration command-line utility
 brew "istioctl"
 # Kubernetes command-line interface
-brew "kubernetes-cli"
+brew "kubernetes-cli", link: false
+# Rainbows and unicorns in your console!
+brew "lolcat"
+# Java-based project management
+brew "maven"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Open source relational database management system
@@ -39,8 +50,16 @@ brew "openshift-cli"
 brew "pipenv"
 # Object-relational database system
 brew "postgresql"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Fuzzy Finder in rust!
+brew "sk"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Internet file retriever
@@ -49,8 +68,12 @@ brew "wget"
 brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# This package contains standard utilities for interacting with MongoDB.
+brew "mongodb/brew/mongodb-database-tools"
 # Tekton CLI - The command line interface for interacting with Tekton
 brew "tektoncd/tools/tektoncd-cli"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
@@ -73,6 +96,10 @@ cask "mactex"
 cask "microsoft-teams"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# GUI client for PostgreSQL databases
+cask "postico"
+# Instant messaging application focusing on security
+cask "signal"
 # Team communication and collaboration software
 cask "slack"
 # Messaging app with a focus on speed and security
