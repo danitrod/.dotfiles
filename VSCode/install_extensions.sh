@@ -1,6 +1,7 @@
 # Install VSCode extensions
 code --install-extension 2gua.rainbow-brackets
 code --install-extension aaron-bond.better-comments
+code --install-extension adpyke.vscode-sql-formatter
 code --install-extension ahmadalli.vscode-nginx-conf
 code --install-extension alexcvzz.vscode-sqlite
 code --install-extension arcanis.vscode-zipfs
@@ -14,12 +15,14 @@ code --install-extension codingyu.laravel-goto-view
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension dracula-theme.theme-dracula
 code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension dtsvet.vscode-wasm
 code --install-extension eamodio.gitlens
 code --install-extension EditorConfig.EditorConfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension ExodiusStudios.comment-anchors
 code --install-extension flowtype.flow-for-vscode
 code --install-extension Gimly81.matlab
+code --install-extension GitHub.copilot
 code --install-extension golang.go
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension GraphQL.vscode-graphql
@@ -33,11 +36,12 @@ code --install-extension mikestead.dotenv
 code --install-extension mongodb.mongodb-vscode
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-dotnettools.csharp
-code --install-extension ms-mssql.mssql
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension mtxr.sqltools
@@ -60,6 +64,7 @@ code --install-extension shanoor.vscode-nginx
 code --install-extension Sir2B.lispbeautifier
 code --install-extension stef-k.laravel-goto-controller
 code --install-extension stkb.rewrap
+code --install-extension svelte.svelte-vscode
 code --install-extension TakumiI.markdowntable
 code --install-extension theumletteam.umlet
 code --install-extension VisualStudioExptTeam.vscodeintellicode

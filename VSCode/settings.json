@@ -12,7 +12,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.codeActionsOnSave": {
-    // "source.organizeImports": true
+    "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["typescript", "javascript"],
@@ -22,6 +22,7 @@
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
+  "sql-formatter.uppercase": true,
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
@@ -46,7 +47,6 @@
   "python.linting.enabled": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSave": false,
     "editor.tabSize": 4
   },
   "diffEditor.ignoreTrimWhitespace": false,
@@ -105,7 +105,8 @@
     "reducers": "redux-reducer",
     "actions": "redux-actions",
     "types": "typescript",
-    "composables": "vue"
+    "composables": "vue",
+    "parallel": "constant"
   },
   "licenser.author": "Daniel T. Rodrigues",
   "licenser.license": "MIT",
@@ -139,6 +140,16 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
+  },
+  "svelte.enable-ts-plugin": true,
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
   },
   "window.zoomLevel": 1
 }
