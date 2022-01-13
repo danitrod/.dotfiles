@@ -80,6 +80,8 @@ cask "discord"
 cask "docker"
 # Web browser
 cask "firefox"
+cask "font-fira-code"
+cask "font-fira-code-nerd-font"
 # Web browser
 cask "google-chrome"
 # Terminal built on web technologies
@@ -108,6 +110,8 @@ cask "telegram"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Video communication and virtual meeting platform
+cask "webex-meetings"
 # Desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform

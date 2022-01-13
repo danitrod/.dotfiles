@@ -1,6 +1,12 @@
 abbr -a gl git pull
 abbr -a gpf git push --force-with-lease
 abbr -a gpu git push upstream
+abbr -a gcl git clone --recurse-submodules
+abbr -a gd git diff
+abbr -a ga git add
+abbr -a gcmsg git commit -m
+abbr -a gp git push
+abbr -a gc! git commit --amend
 
 abbr -a gr git remote
 abbr -a gra git remote add
@@ -90,4 +96,5 @@ abbr -a yios yarn ios
 abbr -a yw yarn watch
 abbr -a ys yarn start
 abbr -a yt yarn test
+abbr -a l ls -al
 
