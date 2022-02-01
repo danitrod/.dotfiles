@@ -115,7 +115,6 @@
   "comments.openPanel": "neverOpen",
   "editor.suggestSelection": "first",
   "python.showStartPage": false,
-  "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "workbench.colorTheme": "Dracula",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.editorAssociations": {
@@ -151,5 +150,6 @@
     "plaintext": false,
     "markdown": true
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "terminal.integrated.defaultProfile.osx": "fish"
 }

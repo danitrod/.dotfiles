@@ -1,3 +1,4 @@
+abbr -a glog git log --oneline --decorate --graph
 abbr -a gl git pull
 abbr -a gpf git push --force-with-lease
 abbr -a gpu git push upstream
@@ -96,5 +97,5 @@ abbr -a yios yarn ios
 abbr -a yw yarn watch
 abbr -a ys yarn start
 abbr -a yt yarn test
-abbr -a l ls -al
+abbr -a l ls -lah
 
