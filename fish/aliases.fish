@@ -1,5 +1,6 @@
 abbr -a glog git log --oneline --decorate --graph
 abbr -a gl git pull
+abbr -a gb git branch
 abbr -a gpf git push --force-with-lease
 abbr -a gpu git push upstream
 abbr -a gcl git clone --recurse-submodules
@@ -88,7 +89,7 @@ abbr -a grao git remote add origin
 abbr -a ic ibmcloud
 abbr -a ilogin ibmcloud login --sso
 abbr -a kb kubectl
-abbr -a rdev RUST_LOG=debug cargo watch -x 'run'
+abbr -a rdev RUST_ENV=development RUST_LOG=debug cargo watch -x 'run'
 abbr -a rmgit rm -rf .git
 abbr -a yb yarn build
 abbr -a ybp yarn build-prod
