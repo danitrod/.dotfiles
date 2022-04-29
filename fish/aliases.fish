@@ -9,6 +9,10 @@ abbr -a ga git add
 abbr -a gcmsg git commit -m
 abbr -a gp git push
 abbr -a gc! git commit --amend
+abbr -a gco git checkout
+abbr -a gc git commit
+abbr -a gm git merge
+abbr -a gmm git merge main
 
 abbr -a gr git remote
 abbr -a gra git remote add
@@ -80,6 +84,8 @@ abbr -a ct cargo test
 abbr -a cw cargo watch -x 'run'
 abbr -a dpa docker ps -a
 abbr -a dps docker ps
+abbr -a dk docker kill
+abbr -a dka docker kill (docker ps -q)
 abbr -a grso git remote show origin
 abbr -a ginit git init
 abbr -a gpuom git push -u origin main

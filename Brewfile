@@ -38,6 +38,8 @@ brew "lolcat"
 brew "maven"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Atlas CLI enables you to manage your MongoDB Atlas
+brew "mongodb-atlas-cli"
 # Open source relational database management system
 brew "mysql"
 # Platform built on V8 to build network applications
@@ -94,8 +96,14 @@ cask "joplin"
 cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Email client
+cask "microsoft-outlook"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Explore and manipulate your MongoDB data
+cask "mongodb-compass"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # GUI client for PostgreSQL databases
