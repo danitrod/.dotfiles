@@ -3,10 +3,13 @@ echo "Starting dotfiles setup."
 # Install xcode cli tools
 xcode-select --install
 
-# Install Homebrew
+# Install Homebrew if not already installed
 which -s brew
 if [[ $? != 0 ]] ; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	# Add brew to path
+	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/danitrod/.zprofile
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 	brew update
 	brew upgrade
 	brew cask upgrade
@@ -14,12 +17,6 @@ fi
 
 # Install brew packages
 brew bundle
-
-# Install IBM Cloud CLI
-which -s ibmcloud
-if [[ $? != 0 ]] ; then
-	curl -sL https://raw.githubusercontent.com/IBM-Cloud/ibm-cloud-developer-tools/master/linux-installer/idt-installer | bash
-fi
 
 # Symlink config files 
 rm "/Users/$(whoami)/Library/Application Support/Code/User/settings.json"
@@ -68,4 +65,3 @@ mkdir ~/.nvm
 
 # Setup vim Dracula thheme
 cd .vim/pack/themes/start && git clone https://github.com/dracula/vim.git dracula
-
