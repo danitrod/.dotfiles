@@ -12,7 +12,7 @@ if [[ $? != 0 ]] ; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 	brew update
 	brew upgrade
-	brew cask upgrade
+	brew upgrade --cask
 fi
 
 # Install brew packages
