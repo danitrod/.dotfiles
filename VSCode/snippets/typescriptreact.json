@@ -44,6 +44,20 @@
     ],
     "description": "Typescript React Functional Component"
   },
+  "React Next Component": {
+    "prefix": "rnct",
+    "body": [
+      "import type { NextPage } from 'next';",
+      "",
+      "const $TM_FILENAME_BASE: NextPage = () => {",
+      "\treturn <div>$0</div>;",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE;",
+      ""
+    ],
+    "description": "Typescript React Functional Component"
+  },
   "React Native Typescript Functional Component": {
     "prefix": "rnft",
     "body": [
