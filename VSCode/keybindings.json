@@ -11,5 +11,9 @@
   {
     "key": "shift+cmd+m",
     "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile"
   }
 ]

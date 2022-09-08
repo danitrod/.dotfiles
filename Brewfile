@@ -6,16 +6,24 @@ tap "mongodb/brew"
 tap "tektoncd/tools"
 # Command-line interface for SQLite
 brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# Platform built on V8 to build network applications
+brew "node"
+# Firebase command-line tools
+brew "firebase-cli"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # GNU compiler collection
@@ -31,19 +39,25 @@ brew "imagemagick"
 # Istio configuration command-line utility
 brew "istioctl"
 # Kubernetes command-line interface
-brew "kubernetes-cli", link: false
+brew "kubernetes-cli"
 # Rainbows and unicorns in your console!
 brew "lolcat"
+# Powerful, lightweight programming language
+brew "lua"
+# Development kit for the Java programming language
+brew "openjdk"
 # Java-based project management
 brew "maven"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Platform built on V8 to build network applications
+brew "node@16"
 # Atlas CLI enables you to manage your MongoDB Atlas
 brew "mongodb-atlas-cli"
 # Open source relational database management system
 brew "mysql"
-# Platform built on V8 to build network applications
-brew "node"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # High performance message passing library
 brew "open-mpi"
 # OpenShift command-line interface tools
@@ -51,7 +65,7 @@ brew "openshift-cli"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
-brew "postgresql"
+brew "postgresql@14"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Search tool like grep and The Silver Searcher
@@ -60,6 +74,8 @@ brew "ripgrep"
 brew "sk"
 # Cross-shell prompt for astronauts
 brew "starship"
+# User interface to the TELNET protocol
+brew "telnet"
 # Program that allows you to count code, quickly
 brew "tokei"
 # Display directories as trees (with optional color/HTML output)
@@ -70,6 +86,8 @@ brew "wget"
 brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Fast static site generator in a single binary with everything built-in
+brew "zola"
 # This package contains standard utilities for interacting with MongoDB.
 brew "mongodb/brew/mongodb-database-tools"
 # Tekton CLI - The command line interface for interacting with Tekton
@@ -86,10 +104,10 @@ cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 # Web browser
 cask "google-chrome"
-# Terminal built on web technologies
-cask "hyper"
 # HTTP and GraphQL Client
 cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # Note taking and to-do application with synchronization capabilities
 cask "joplin"
 # Clipboard manager
@@ -104,6 +122,8 @@ cask "microsoft-outlook"
 cask "microsoft-teams"
 # Explore and manipulate your MongoDB data
 cask "mongodb-compass"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # GUI client for PostgreSQL databases

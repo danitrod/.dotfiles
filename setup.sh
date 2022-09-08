@@ -59,10 +59,13 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 rm /Users/$(whoami)/.config/fish/config.fish
 ln -s $(pwd)/config.fish /Users/$(whoami)/.config/fish/
 fish fish/aliases.fish
+fish fish/setup.fish
 fish fish/plugins.fish
 
 # Setup NVM
 mkdir ~/.nvm
 
-# Setup vim Dracula thheme
-cd .vim/pack/themes/start && git clone https://github.com/dracula/vim.git dracula
+# Setup Neovim Packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+

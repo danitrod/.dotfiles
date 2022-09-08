@@ -12,7 +12,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.codeActionsOnSave": {
-    // "source.organizeImports": true,
+    "source.organizeImports": true,
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["typescript", "javascript"],
@@ -82,7 +82,7 @@
   "[ruby]": { "editor.defaultFormatter": "rebornix.ruby" },
   "ruby.format": "rubocop",
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -148,8 +148,47 @@
     "*": true,
     "yaml": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": false,
+    "rust": false,
+    "go": false
   },
-  "window.zoomLevel": 1,
-  "terminal.integrated.defaultProfile.osx": "fish"
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "debug.allowBreakpointsEverywhere": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "aws.telemetry": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "go.mod": "go.sum",
+    "*.go": "$(capture)_test.go"
+  },
+  "window.zoomLevel": 1
 }
