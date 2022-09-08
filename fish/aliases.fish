@@ -52,7 +52,8 @@ abbr -a gstaa git stash apply
 abbr -a gstc git stash clear
 abbr -a gstd git stash drop
 abbr -a gstl git stash list
-abbr -a gstp git stash pop
+abbr -a gsp git stash push
+abbr -a gpp git stash pop
 abbr -a gsts git stash show --text
 abbr -a gstu gsta --include-untracked
 abbr -a gstall git stash --all
