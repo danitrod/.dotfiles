@@ -1,6 +1,6 @@
 require "user.options"
 require "user.plugins"
-require "user.theme"
+require "user.gui"
 require "user.lsp"
-require "user.completion"
+require "user.mappings"
 
