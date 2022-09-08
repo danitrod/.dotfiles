@@ -12,6 +12,14 @@ require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	-- Test runners
+	use {
+		"klen/nvim-test",
+		config = function()
+			require('nvim-test').setup()
+		end
+	}
+
 	-- code styling
 	use 'p00f/nvim-ts-rainbow'
 	use 'lukas-reineke/indent-blankline.nvim'

@@ -7,6 +7,11 @@ require('lualine').setup { theme = 'dracula' }
 require("nvim-tree").setup({
 	view = {
 		side = "right"
+	},
+	renderer = {
+		icons = {
+			git_placement = "after"
+		}
 	}
 })
 require("bufferline").setup{}
