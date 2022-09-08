@@ -26,17 +26,8 @@ ln -s $(pwd)/VSCode/keybindings.json "/Users/$(whoami)/Library/Application Suppo
 rm -rf "/Users/$(whoami)/Library/Application Support/Code/User/snippets"
 ln -s $(pwd)/VSCode/snippets/ "/Users/$(whoami)/Library/Application Support/Code/User"
 
-rm /Users/$(whoami)/.zshrc
-ln -s $(pwd)/.zshrc /Users/$(whoami)/.zshrc
-
-rm /Users/$(whoami)/.vimrc
-ln -s $(pwd)/.vimrc /Users/$(whoami)/.vimrc
-
-rm -rf /Users/$(whoami)/.vim
-ln -s $(pwd)/.vim /Users/$(whoami)/.vim
-
-rm /Users/$(whoami)/.hyper.js
-ln -s $(pwd)/.hyper.js /Users/$(whoami)/.hyper.js
+rm -r /Users/$(whoami)/.config/nvim
+ln -s $(pwd)/nvim /Users/$(whoami)/.config
 
 rm /Users/$(whoami)/.config/starship.toml
 ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
