@@ -85,7 +85,6 @@ abbr -a cw cargo watch -x 'run'
 abbr -a dpa docker ps -a
 abbr -a dps docker ps
 abbr -a dk docker kill
-abbr -a dka docker kill (docker ps -q)
 abbr -a grso git remote show origin
 abbr -a ginit git init
 abbr -a gpuom git push -u origin main
