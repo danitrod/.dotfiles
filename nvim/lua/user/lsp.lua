@@ -1,6 +1,6 @@
 vim.cmd [[set completeopt=menu,menuone,noselect]]
 
--- Setup nvim-cmp.
+-- Setup code completion.
 local cmp = require 'cmp'
 
 cmp.setup({

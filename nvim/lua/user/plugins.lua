@@ -12,6 +12,9 @@ require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	-- Lua helpers
+	use "nvim-lua/plenary.nvim"
+
 	-- Test runners
 	use {
 		"klen/nvim-test",
@@ -20,9 +23,24 @@ require('packer').startup(function(use)
 		end
 	}
 
+	-- Git integration
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end
+	}
+
 	-- code styling
 	use 'p00f/nvim-ts-rainbow'
 	use 'lukas-reineke/indent-blankline.nvim'
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {}
+		end
+	}
 
 	-- nvim completion
 	use 'hrsh7th/cmp-nvim-lsp'
