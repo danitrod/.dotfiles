@@ -51,7 +51,14 @@ require('lspconfig')['gopls'].setup{}
 require('lspconfig')['luau_lsp'].setup{}
 require('lspconfig')['pylsp'].setup{}
 require('lspconfig')['rust_analyzer'].setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.dockerls.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.eslint.setup{}
+require'lspconfig'.marksman.setup{}
 
+-- Format on save
 vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
 -- Setup advanced syntax highlighting

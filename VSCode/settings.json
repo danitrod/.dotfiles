@@ -45,6 +45,7 @@
   "indentRainbow.errorColor": "rgba(226,132,24,0.2)",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
+  "python.formatting.provider": "black",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.tabSize": 4
@@ -190,5 +191,8 @@
     "go.mod": "go.sum",
     "*.go": "$(capture)_test.go"
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  }
 }

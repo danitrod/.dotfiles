@@ -16,6 +16,8 @@ brew "cmake"
 brew "coreutils"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
@@ -38,18 +40,20 @@ brew "go"
 brew "imagemagick"
 # Istio configuration command-line utility
 brew "istioctl"
+# Load testing and performance measurement application
+brew "jmeter"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Powerful, lightweight programming language
 brew "lua"
-# Development kit for the Java programming language
-brew "openjdk"
 # Java-based project management
 brew "maven"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Platform built on V8 to build network applications
 brew "node@16"
 # Atlas CLI enables you to manage your MongoDB Atlas
@@ -70,6 +74,8 @@ brew "postgresql@14"
 brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Fuzzy Finder in rust!
 brew "sk"
 # Cross-shell prompt for astronauts
@@ -92,6 +98,8 @@ brew "zola"
 brew "mongodb/brew/mongodb-database-tools"
 # Tekton CLI - The command line interface for interacting with Tekton
 brew "tektoncd/tools/tektoncd-cli"
+# Automatic tiling window manager similar to xmonad
+cask "amethyst"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Voice and text chat software
@@ -101,6 +109,7 @@ cask "docker"
 # Web browser
 cask "firefox"
 cask "font-fira-code"
+# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
 # Web browser
 cask "google-chrome"
@@ -128,6 +137,8 @@ cask "ngrok"
 cask "obs"
 # GUI client for PostgreSQL databases
 cask "postico"
+# Collaboration platform for API development
+cask "postman"
 # Instant messaging application focusing on security
 cask "signal"
 # Team communication and collaboration software
