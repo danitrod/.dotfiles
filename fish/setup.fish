@@ -2,5 +2,8 @@
 fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # Add Go binaries to Path
-fish_add_path /Users/danitrod/go/bin/
+fish_add_path /Users/(whoami)/go/bin/
+
+# Add GOPATH variable
+set -Ux GOPATH /Users/(whoami)/go
 

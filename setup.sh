@@ -61,3 +61,12 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # Setup iterm2 fish integration
 curl -L https://iterm2.com/shell_integration/fish \
 -o ~/.iterm2_shell_integration.fish
+
+# Language servers
+npm i -g bash-language-server
+go install golang.org/x/tools/gopls@latest
+pip3 install python-lsp-server
+pip3 install cmake-language-server
+npm i -g vscode-langservers-extracted
+npm install -g typescript typescript-language-server
+npm install -g dockerfile-language-server-nodejs

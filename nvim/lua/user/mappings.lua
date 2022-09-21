@@ -14,7 +14,7 @@ vim.cmd[[nnoremap <leader>q! <cmd>bdelete!<cr>]]
 vim.cmd[[nnoremap <leader>rtf <cmd>TestFile<cr>]]
 vim.cmd[[nnoremap <leader>rta <cmd>TestSuite<cr>]]
 vim.cmd[[nnoremap <leader>e <cmd>lua vim.diagnostic.goto_next()<cr>]]
-vim.cmd[[nnoremap <leader>r <cmd>lua vim.lsp.buf.rename()<cr>]]
+vim.cmd[[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
 
 -- Insert mode
 vim.cmd[[inoremap " ""<left>]]

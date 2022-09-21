@@ -57,6 +57,7 @@ require'lspconfig'.jsonls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.marksman.setup{}
+require'lspconfig'.cmake.setup{}
 
 -- Format on save
 vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]

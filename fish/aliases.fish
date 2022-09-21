@@ -105,4 +105,5 @@ abbr -a yw yarn watch
 abbr -a ys yarn start
 abbr -a yt yarn test
 abbr -a l ls -lah
+abbr -a mkr make run
 
