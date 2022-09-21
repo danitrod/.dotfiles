@@ -23,11 +23,11 @@ rm "/Users/$(whoami)/Library/Application Support/Code/User/settings.json"
 ln -s $(pwd)/VSCode/settings.json "/Users/$(whoami)/Library/Application Support/Code/User/settings.json"
 rm "/Users/$(whoami)/Library/Application Support/Code/User/keybindings.json"
 ln -s $(pwd)/VSCode/keybindings.json "/Users/$(whoami)/Library/Application Support/Code/User/keybindings.json"
-rm -rf "/Users/$(whoami)/Library/Application Support/Code/User/snippets"
+rm -r "/Users/$(whoami)/Library/Application Support/Code/User/snippets"
 ln -s $(pwd)/VSCode/snippets/ "/Users/$(whoami)/Library/Application Support/Code/User"
 
 rm -r /Users/$(whoami)/.config/nvim
-ln -s $(pwd)/nvim /Users/$(whoami)/.config
+ln -s $(pwd)/nvim/ /Users/$(whoami)/.config/nvim
 
 rm /Users/$(whoami)/.config/starship.toml
 ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
@@ -58,3 +58,6 @@ mkdir ~/.nvm
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
+# Setup iterm2 fish integration
+curl -L https://iterm2.com/shell_integration/fish \
+-o ~/.iterm2_shell_integration.fish
