@@ -72,3 +72,6 @@ require'nvim-treesitter.configs'.setup{
 	}
 }
 
+-- Test runner
+require('nvim-test').setup{}
+

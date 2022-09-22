@@ -16,13 +16,6 @@ vim.cmd[[nnoremap <leader>rta <cmd>TestSuite<cr>]]
 vim.cmd[[nnoremap <leader>e <cmd>lua vim.diagnostic.goto_next()<cr>]]
 vim.cmd[[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
 
--- Insert mode
-vim.cmd[[inoremap " ""<left>]]
-vim.cmd[[inoremap ' ''<left>]]
-vim.cmd[[inoremap ( ()<left>]]
-vim.cmd[[inoremap [ []<left>]]
-vim.cmd[[inoremap { {}<left>]]
-
 -- Trouble
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}

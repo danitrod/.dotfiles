@@ -16,12 +16,7 @@ require('packer').startup(function(use)
 	use "nvim-lua/plenary.nvim"
 
 	-- Test runners
-	use {
-		"klen/nvim-test",
-		config = function()
-			require('nvim-test').setup()
-		end
-	}
+	use	"klen/nvim-test"
 
 	-- Git integration
 	use {
@@ -41,6 +36,7 @@ require('packer').startup(function(use)
 			require("trouble").setup {}
 		end
 	}
+	use 'jiangmiao/auto-pairs'
 
 	-- nvim completion
 	use 'hrsh7th/cmp-nvim-lsp'

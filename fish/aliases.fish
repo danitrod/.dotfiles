@@ -83,20 +83,22 @@ abbr -a cb cargo build
 abbr -a cr cargo run
 abbr -a ct cargo test
 abbr -a cw cargo watch -x 'run'
+abbr -a rdev RUST_ENV=development RUST_LOG=debug cargo watch -x 'run'
+
 abbr -a dpa docker ps -a
 abbr -a dps docker ps
 abbr -a dk docker kill
+
 abbr -a grso git remote show origin
 abbr -a ginit git init
 abbr -a gpuom git push -u origin main
 abbr -a gpuo git push -u origin
 abbr -a glom git pull origin main
 abbr -a grao git remote add origin
-abbr -a ic ibmcloud
-abbr -a ilogin ibmcloud login --sso
-abbr -a kb kubectl
-abbr -a rdev RUST_ENV=development RUST_LOG=debug cargo watch -x 'run'
 abbr -a rmgit rm -rf .git
+
+abbr -a kb kubectl
+
 abbr -a yb yarn build
 abbr -a ybp yarn build-prod
 abbr -a yd yarn dev
@@ -104,6 +106,8 @@ abbr -a yios yarn ios
 abbr -a yw yarn watch
 abbr -a ys yarn start
 abbr -a yt yarn test
+
 abbr -a l ls -lah
 abbr -a mkr make run
+abbr -a mkt make test
 
