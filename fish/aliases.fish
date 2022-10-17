@@ -108,6 +108,7 @@ abbr -a ys yarn start
 abbr -a yt yarn test
 
 abbr -a l ls -lah
+abbr -a mkb make build
 abbr -a mkr make run
 abbr -a mkt make test
 

@@ -12,11 +12,15 @@ require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	-- Debug
+	use 'mfussenegger/nvim-dap'
+
 	-- Lua helpers
 	use "nvim-lua/plenary.nvim"
 
 	-- Test runners
 	use	"klen/nvim-test"
+	use "leoluz/nvim-dap-go"
 
 	-- Git integration
 	use {
@@ -37,6 +41,7 @@ require('packer').startup(function(use)
 		end
 	}
 	use 'jiangmiao/auto-pairs'
+	use 'tpope/vim-commentary'
 
 	-- nvim completion
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -82,4 +87,3 @@ PackerCompile
 PackerClean
 PackerInstall
 ]]
-

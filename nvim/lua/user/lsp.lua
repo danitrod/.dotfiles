@@ -74,4 +74,4 @@ require'nvim-treesitter.configs'.setup{
 
 -- Test runner
 require('nvim-test').setup{}
-
+require('dap-go').setup()
