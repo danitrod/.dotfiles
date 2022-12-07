@@ -13,6 +13,7 @@ abbr -a gco git checkout
 abbr -a gc git commit
 abbr -a gm git merge
 abbr -a gmm git merge main
+abbr -a gchp git cherry-pick
 
 abbr -a gr git remote
 abbr -a gra git remote add
