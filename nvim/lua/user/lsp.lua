@@ -47,10 +47,11 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Setup LSPs
-require('lspconfig')['gopls'].setup{}
-require('lspconfig')['luau_lsp'].setup{}
-require('lspconfig')['pylsp'].setup{}
-require('lspconfig')['rust_analyzer'].setup{}
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.java_language_server.setup{}
+require'lspconfig'.luau_lsp.setup{}
+require'lspconfig'.pylsp.setup{}
+require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.jsonls.setup{}

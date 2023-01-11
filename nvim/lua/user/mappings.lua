@@ -22,6 +22,7 @@ vim.cmd[[nnoremap <leader>rtf <cmd>TestFile<cr>]]
 vim.cmd[[nnoremap <leader>rta <cmd>TestSuite<cr>]]
 
 vim.cmd[[nnoremap <leader>e <cmd>lua vim.diagnostic.goto_next()<cr>]]
+vim.cmd[[nnoremap <leader>E <cmd>lua vim.diagnostic.goto_prev()<cr>]]
 vim.cmd[[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
 
 vim.cmd[[nnoremap <leader>bl <cmd>Gitsigns blame_line<cr>]]
