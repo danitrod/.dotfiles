@@ -48,7 +48,9 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- Setup LSPs
 require'lspconfig'.gopls.setup{}
-require'lspconfig'.java_language_server.setup{}
+require'lspconfig'.java_language_server.setup{
+	cmd = {'/Users/danitrod/.dotfiles/nvim/lsp/java-language-server/dist/lang_server_mac.sh'}
+}
 require'lspconfig'.luau_lsp.setup{}
 require'lspconfig'.pylsp.setup{}
 require'lspconfig'.rust_analyzer.setup{}

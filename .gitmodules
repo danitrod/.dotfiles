@@ -10,3 +10,6 @@
 [submodule ".vim/plugged/yats.vim"]
 	path = .vim/plugged/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "nvim/lsp/java-language-server"]
+	path = nvim/lsp/java-language-server
+	url = git@github.com:georgewfraser/java-language-server.git
