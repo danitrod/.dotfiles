@@ -63,7 +63,7 @@ require'lspconfig'.marksman.setup{}
 require'lspconfig'.cmake.setup{}
 
 -- Format on save
-vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Setup advanced syntax highlighting
 require'nvim-treesitter.configs'.setup{
