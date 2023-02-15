@@ -42,6 +42,7 @@ require('packer').startup(function(use)
 	}
 	use 'jiangmiao/auto-pairs'
 	use 'tpope/vim-commentary'
+	use 'sbdchd/neoformat'
 
 	-- nvim completion
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -79,6 +80,9 @@ require('packer').startup(function(use)
 
 	-- Golang
 	use 'fatih/vim-go'
+
+	-- Rust
+	use 'simrat39/rust-tools.nvim'
 end)
 
 -- install new plugins

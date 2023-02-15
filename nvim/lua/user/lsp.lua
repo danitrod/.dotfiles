@@ -53,7 +53,6 @@ require'lspconfig'.java_language_server.setup{
 }
 require'lspconfig'.luau_lsp.setup{}
 require'lspconfig'.pylsp.setup{}
-require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.jsonls.setup{}
@@ -62,8 +61,23 @@ require'lspconfig'.eslint.setup{}
 require'lspconfig'.marksman.setup{}
 require'lspconfig'.cmake.setup{}
 
+-- Rust tools
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
+})
+
 -- Format on save
 vim.cmd[[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+vim.cmd[[autocmd BufWritePre *.ts,*.md Neoformat]]
 
 -- Setup advanced syntax highlighting
 require'nvim-treesitter.configs'.setup{
