@@ -70,3 +70,5 @@ pip3 install cmake-language-server
 npm i -g vscode-langservers-extracted
 npm install -g typescript typescript-language-server
 npm install -g dockerfile-language-server-nodejs
+npm i -g eslint
+npm i -g prettier

@@ -1,7 +1,7 @@
 local dracula = require("dracula")
 dracula.setup()
 
-vim.cmd[[colorscheme dracula]]
+vim.cmd [[colorscheme dracula]]
 
 require('lualine').setup { theme = 'dracula' }
 require("nvim-tree").setup({
@@ -15,6 +15,5 @@ require("nvim-tree").setup({
 		}
 	}
 })
-require("bufferline").setup{}
-require("nvim-web-devicons").setup{}
-
+require("bufferline").setup {}
+require("nvim-web-devicons").setup {}

@@ -8,24 +8,24 @@ vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references)
 
 vim.keymap.set("n", "<leader>to", require("nvim-tree.api").tree.toggle)
 
-vim.cmd[[nnoremap <leader>tf <cmd>NvimTreeFindFile<cr>]]
+vim.cmd [[nnoremap <leader>tf <cmd>NvimTreeFindFile<cr>]]
 
-vim.cmd[[nnoremap <leader>x< <cmd>BufferLineCloseLeft<cr>]]
-vim.cmd[[nnoremap <leader>x> <cmd>BufferLineCloseRight<cr>]]
-vim.cmd[[nnoremap <leader>[ <cmd>BufferLineCyclePrev<cr>]]
-vim.cmd[[nnoremap <leader>] <cmd>BufferLineCycleNext<cr>]]
-vim.cmd[[nnoremap <leader>bp <cmd>BufferLinePick<cr>]]
-vim.cmd[[nnoremap <leader>w <cmd>bdelete<cr>]]
-vim.cmd[[nnoremap <leader>q! <cmd>bdelete!<cr>]]
+vim.cmd [[nnoremap <leader>x< <cmd>BufferLineCloseLeft<cr>]]
+vim.cmd [[nnoremap <leader>x> <cmd>BufferLineCloseRight<cr>]]
+vim.cmd [[nnoremap <leader>[ <cmd>BufferLineCyclePrev<cr>]]
+vim.cmd [[nnoremap <leader>] <cmd>BufferLineCycleNext<cr>]]
+vim.cmd [[nnoremap <leader>bp <cmd>BufferLinePick<cr>]]
+vim.cmd [[nnoremap <leader>w <cmd>bdelete<cr>]]
+vim.cmd [[nnoremap <leader>q! <cmd>bdelete!<cr>]]
 
-vim.cmd[[nnoremap <leader>rtf <cmd>TestFile<cr>]]
-vim.cmd[[nnoremap <leader>rta <cmd>TestSuite<cr>]]
+vim.cmd [[nnoremap <leader>rtf <cmd>TestFile<cr>]]
+vim.cmd [[nnoremap <leader>rta <cmd>TestSuite<cr>]]
 
-vim.cmd[[nnoremap <leader>e <cmd>lua vim.diagnostic.goto_next()<cr>]]
-vim.cmd[[nnoremap <leader>E <cmd>lua vim.diagnostic.goto_prev()<cr>]]
-vim.cmd[[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
+vim.cmd [[nnoremap <leader>e <cmd>lua vim.diagnostic.goto_next()<cr>]]
+vim.cmd [[nnoremap <leader>E <cmd>lua vim.diagnostic.goto_prev()<cr>]]
+vim.cmd [[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
 
-vim.cmd[[nnoremap <leader>bl <cmd>Gitsigns blame_line<cr>]]
+vim.cmd [[nnoremap <leader>bl <cmd>Gitsigns blame_line<cr>]]
 
 -- vertical navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -41,22 +41,22 @@ vim.keymap.set("n", "<leader>ms", require("nvim-tree.api").marks.navigate.select
 
 -- Trouble
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-  {silent = true, noremap = true}
+	{ silent = true, noremap = true }
 )
 
 -- Debug
@@ -66,4 +66,4 @@ vim.keymap.set("n", "<leader>si", require("dap").step_into)
 vim.keymap.set("n", "<leader>cc", require("dap").continue)
 
 -- Go
-vim.cmd[[nnoremap <leader>gi <cmd>GoImplements<cr>]]
+vim.cmd [[nnoremap <leader>gi <cmd>GoImplements<cr>]]

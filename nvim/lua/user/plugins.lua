@@ -2,7 +2,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Theme
-	use {'Mofiqul/dracula.nvim', as = 'dracula'}
+	use { 'Mofiqul/dracula.nvim', as = 'dracula' }
 	use 'kyazdani42/nvim-web-devicons'
 
 	-- LSP
@@ -19,7 +19,7 @@ require('packer').startup(function(use)
 	use "nvim-lua/plenary.nvim"
 
 	-- Test runners
-	use	"klen/nvim-test"
+	use "klen/nvim-test"
 	use "leoluz/nvim-dap-go"
 
 	-- Git integration
@@ -52,7 +52,7 @@ require('packer').startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 
 	-- snippets
-	use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 	use 'saadparwaiz1/cmp_luasnip'
 
 	-- statusline
@@ -72,21 +72,29 @@ require('packer').startup(function(use)
 	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
 	-- bufferlines (tabs)
-	use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+	use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
 	-- Golang
 	use 'fatih/vim-go'
 
 	-- Rust
 	use 'simrat39/rust-tools.nvim'
+
+	-- Markdown
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && yarn install",
+		setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+		ft = { "markdown" }
+	})
 end)
 
 -- install new plugins
-vim.cmd[[
+vim.cmd [[
 PackerCompile
 PackerClean
 PackerInstall
