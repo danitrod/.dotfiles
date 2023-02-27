@@ -59,6 +59,7 @@ require 'lspconfig'.tsserver.setup {}
 require 'lspconfig'.eslint.setup {}
 require 'lspconfig'.marksman.setup {}
 require 'lspconfig'.cmake.setup {}
+require 'lspconfig'.taplo.setup {}
 
 -- For some reason lua_ls is not configured, add it manually
 local lspconfig = require 'lspconfig'
