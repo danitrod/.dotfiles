@@ -86,9 +86,10 @@ abbr -a ct cargo test
 abbr -a cw cargo watch -x 'run'
 abbr -a rdev RUST_ENV=development RUST_LOG=debug cargo watch -x 'run'
 
-abbr -a dpa docker ps -a
-abbr -a dps docker ps
-abbr -a dk docker kill
+abbr -a ppa podman ps -a
+abbr -a pps podman ps
+abbr -a pk podman kill
+abbr -a pb podman build
 
 abbr -a grso git remote show origin
 abbr -a ginit git init
