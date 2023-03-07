@@ -4,4 +4,4 @@ if status --is-login
 end
 
 source ~/.iterm2_shell_integration.fish
-
+source ~/.dotfiles/fish/aliases.fish

@@ -123,12 +123,6 @@ cask "joplin"
 cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-# Email client
-cask "microsoft-outlook"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Explore and manipulate your MongoDB data
 cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost

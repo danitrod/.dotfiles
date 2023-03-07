@@ -9,4 +9,3 @@ fish_add_path ~/.cargo/bin
 
 # Add GOPATH variable
 set -Ux GOPATH /Users/(whoami)/go
-

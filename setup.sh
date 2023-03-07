@@ -50,6 +50,7 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 rm /Users/$(whoami)/.config/fish/config.fish
 ln -s $(pwd)/config.fish /Users/$(whoami)/.config/fish/
 fish fish/*
+chsh -s $(which fish)
 
 # Setup NVM
 mkdir ~/.nvm

@@ -6,7 +6,7 @@ abbr -a gpu git push upstream
 abbr -a gcl git clone --recurse-submodules
 abbr -a gd git diff
 abbr -a ga git add
-abbr -a gcmsg git commit -m
+abbr -a gcmsg --set-cursor 'git commit -m "%"'
 abbr -a gp git push
 abbr -a gc! git commit --amend
 abbr -a gco git checkout
