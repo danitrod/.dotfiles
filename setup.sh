@@ -32,6 +32,9 @@ ln -s $(pwd)/nvim/ /Users/$(whoami)/.config/nvim
 rm /Users/$(whoami)/.config/starship.toml
 ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
 
+# Use podman instead of docker
+ln -s /usr/local/bin/podman /usr/local/bin/docker
+
 # Install rust and cargo tools
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
