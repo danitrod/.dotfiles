@@ -26,6 +26,9 @@ vim.cmd [[nnoremap <leader>E <cmd>lua vim.diagnostic.goto_prev()<cr>]]
 vim.cmd [[nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>]]
 
 vim.cmd [[nnoremap <leader>bl <cmd>Gitsigns blame_line<cr>]]
+vim.cmd [[nnoremap <leader>nh <cmd>Gitsigns next_hunk<cr>]]
+vim.cmd [[nnoremap <leader>Nh <cmd>Gitsigns prev_hunk<cr>]]
+vim.cmd [[nnoremap <leader>hr <cmd>Gitsigns reset_hunk<cr>]]
 
 -- vertical navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

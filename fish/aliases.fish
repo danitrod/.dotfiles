@@ -90,6 +90,7 @@ abbr -a ppa podman ps -a
 abbr -a pps podman ps
 abbr -a pk podman kill
 abbr -a pb podman build
+abbr -a plog podman logs
 
 abbr -a grso git remote show origin
 abbr -a ginit git init
