@@ -43,6 +43,13 @@ require('packer').startup(function(use)
 	use 'jiangmiao/auto-pairs'
 	use 'tpope/vim-commentary'
 	use 'sbdchd/neoformat'
+	use {
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup {}
+		end
+	}
 
 	-- nvim completion
 	use 'hrsh7th/cmp-nvim-lsp'
