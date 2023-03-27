@@ -83,7 +83,7 @@ require('packer').startup(function(use)
 	}
 
 	-- bufferlines (tabs)
-	use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons' }
 
 	-- Golang
 	use 'fatih/vim-go'
