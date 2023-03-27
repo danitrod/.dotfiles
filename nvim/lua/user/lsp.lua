@@ -77,6 +77,9 @@ require 'lspconfig'.cmake.setup {
 require 'lspconfig'.taplo.setup {
 	capabilities = capabilities
 }
+require 'lspconfig'.bufls.setup {
+	capabilities = capabilities
+}
 
 -- For some reason lua_ls is not configured, add it manually
 local lspconfig = require 'lspconfig'
