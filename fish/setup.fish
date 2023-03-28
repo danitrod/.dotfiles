@@ -9,3 +9,7 @@ fish_add_path ~/.cargo/bin
 
 # Add GOPATH variable
 set -Ux GOPATH /Users/(whoami)/go
+
+# Setup git
+git config --global user.name "Daniel T. Rodrigues"
+git config --global user.email "danitrod@protonmail.com"
