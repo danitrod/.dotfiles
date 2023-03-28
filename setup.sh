@@ -48,8 +48,6 @@ cargo install cargo-watch
 cargo install trunk wasm-bindgen-cli wasm-pack
 
 # Fish setup
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
 rm /Users/$(whoami)/.config/fish/config.fish
 ln -s $(pwd)/config.fish /Users/$(whoami)/.config/fish/
 fish fish/*
