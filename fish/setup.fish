@@ -14,3 +14,17 @@ set -Ux GOPATH /Users/(whoami)/go
 git config --global user.name "Daniel T. Rodrigues"
 git config --global user.email "danitrod@protonmail.com"
 git config --global pull.rebase true
+
+# Setup Nvim Treesitter
+nvim --headless +"TSInstall lua" +q
+nvim --headless +"TSInstall vim" +q
+nvim --headless +"TSInstall rust" +q
+nvim --headless +"TSInstall go" +q
+nvim --headless +"TSInstall python" +q
+nvim --headless +"TSInstall java" +q
+nvim --headless +"TSInstall javascript" +q
+nvim --headless +"TSInstall typescript" +q
+nvim --headless +"TSInstall bash" +q
+nvim --headless +"TSInstall fish" +q
+nvim --headless +"TSInstall html" +q
+nvim --headless +"TSInstall css" +q
