@@ -97,6 +97,7 @@ abbr -a grso git remote show origin
 abbr -a ginit git init
 abbr -a gpuom git push -u origin main
 abbr -a gpuo git push -u origin
+abbr -a gpuod git push -u origin develop
 abbr -a glom git pull origin main
 abbr -a grao git remote add origin
 abbr -a rmgit rm -rf .git
