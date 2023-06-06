@@ -134,9 +134,9 @@ rt.setup({
 })
 
 -- Format on save
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {
