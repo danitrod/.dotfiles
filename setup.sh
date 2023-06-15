@@ -75,3 +75,4 @@ npm install -g typescript typescript-language-server
 npm install -g dockerfile-language-server-nodejs
 npm i -g eslint
 npm i -g prettier
+npm install -g emmet-ls

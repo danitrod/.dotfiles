@@ -80,6 +80,14 @@ require 'lspconfig'.taplo.setup {
 require 'lspconfig'.bufls.setup {
 	capabilities = capabilities
 }
+require 'lspconfig'.html.setup {
+	capabilities = capabilities
+}
+require 'lspconfig'.emmet_ls.setup {
+	capabilities = capabilities,
+	filetypes = { "css", "eruby", "html", "htmldjango", "javascript", "javascriptreact", "less", "sass", "scss", "svelte",
+		"pug", "typescriptreact", "vue" },
+}
 
 -- For some reason lua_ls is not configured, add it manually
 local lspconfig = require 'lspconfig'
@@ -137,6 +145,7 @@ rt.setup({
 vim.cmd [[autocmd BufWritePre *\(.md\|.json\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
+vim.cmd [[autocmd BufWritePre *.html Neoformat prettier]]
 
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {
