@@ -142,10 +142,16 @@ rt.setup({
 })
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.json\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.json\|.html\|.htmldjango\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
-vim.cmd [[autocmd BufWritePre *.html Neoformat prettier]]
+vim.cmd [[autocmd BufWritePre *.html Neoformat]]
+
+-- Custom format args
+vim.g.neoformat_html_djlint = {
+	exe = 'djlint',
+	args = { '--reformat', '--indent 2' },
+}
 
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {

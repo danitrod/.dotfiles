@@ -70,6 +70,7 @@ npm i -g bash-language-server
 go install golang.org/x/tools/gopls@latest
 pip3 install python-lsp-server
 pip3 install cmake-language-server
+pip3 install djlint
 npm i -g vscode-langservers-extracted
 npm install -g typescript typescript-language-server
 npm install -g dockerfile-language-server-nodejs
