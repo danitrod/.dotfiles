@@ -150,7 +150,7 @@ vim.cmd [[autocmd BufWritePre *.html Neoformat]]
 -- Custom format args
 vim.g.neoformat_htmldjango_djlint = {
 	exe = 'djlint',
-	args = { '-', '--reformat', '--indent 2' },
+	args = { '-', '--reformat', '--indent 2', '--max-blank-lines 1', '--max-line-length 100' },
 	stdin = 1,
 }
 
