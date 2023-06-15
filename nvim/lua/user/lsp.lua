@@ -148,9 +148,10 @@ vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.html Neoformat]]
 
 -- Custom format args
-vim.g.neoformat_html_djlint = {
+vim.g.neoformat_htmldjango_djlint = {
 	exe = 'djlint',
-	args = { '--reformat', '--indent 2' },
+	args = { '-', '--reformat', '--indent 2' },
+	stdin = 1,
 }
 
 -- Setup advanced syntax highlighting
