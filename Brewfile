@@ -4,10 +4,12 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "mongodb/brew"
 tap "tektoncd/tools"
+# Command-line interface for SQLite
+brew "sqlite"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
@@ -32,6 +34,8 @@ brew "gh"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Development kit for the Java programming language
@@ -62,12 +66,18 @@ brew "mongodb-atlas-cli"
 brew "neovim"
 # High performance message passing library
 brew "open-mpi"
+# Development kit for the Java programming language
+brew "openjdk@11"
 # Python dependency management tool
 brew "pipenv"
 # Tool for managing OCI containers and pods
 brew "podman"
 # Object-relational database system
 brew "postgresql@14"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Search tool like grep and The Silver Searcher
@@ -122,7 +132,7 @@ cask "joplin"
 cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# Explore and manipulate your MongoDB data
+# Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"

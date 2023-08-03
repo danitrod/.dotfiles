@@ -32,6 +32,9 @@ ln -s $(pwd)/nvim/ /Users/$(whoami)/.config/nvim
 rm /Users/$(whoami)/.config/starship.toml
 ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
 
+rm -r /Users/$(whoami)/.config/bat
+ln -s $(pwd)/bat/ /Users/$(whoami)/.config/bat
+
 # Use podman instead of docker
 ln -s /usr/local/bin/podman /usr/local/bin/docker
 
