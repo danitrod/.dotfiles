@@ -17,16 +17,19 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup({
 	view = {
 		side = "right",
-		adaptive_size = true
+		adaptive_size = true,
 	},
 	sort_by = "case_sensitive",
 	renderer = {
 		group_empty = true,
 		icons = {
-			git_placement = "after"
-		}
+			git_placement = "after",
+		},
 	},
 	filters = {
 		dotfiles = false,
+	},
+	git = {
+		ignore = false,
 	},
 })

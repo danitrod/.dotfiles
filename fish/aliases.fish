@@ -116,4 +116,4 @@ abbr -a l ls -lah
 abbr -a mkb make build
 abbr -a mkr make run
 abbr -a mkt make test
-
+abbr -a mktl make test-local
