@@ -35,6 +35,9 @@ ln -s $(pwd)/starship.toml /Users/$(whoami)/.config/starship.toml
 rm -r /Users/$(whoami)/.config/bat
 ln -s $(pwd)/bat/ /Users/$(whoami)/.config/bat
 
+rm -r "/Users/$(whoami)/.gitconfig"
+ln -s "$(pwd)/.gitconfig" "/Users/$(whoami)/.gitconfig"
+
 # Use podman instead of docker
 ln -s /usr/local/bin/podman /usr/local/bin/docker
 
