@@ -1,3 +1,7 @@
+# Add Homebrew to Path
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+
 # Add OpenJDK to Path
 fish_add_path /opt/homebrew/opt/openjdk/bin
 
@@ -9,11 +13,6 @@ fish_add_path ~/.cargo/bin
 
 # Add GOPATH variable
 set -Ux GOPATH /Users/(whoami)/go
-
-# Setup git
-git config --global user.name "Daniel T. Rodrigues"
-git config --global user.email "danitrod@protonmail.com"
-git config --global pull.rebase true
 
 # Setup Nvim Treesitter
 nvim --headless +"TSInstall lua" +q
