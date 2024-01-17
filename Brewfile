@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "mongodb/brew"
 tap "tektoncd/tools"
 # Command-line interface for SQLite
@@ -16,6 +14,8 @@ brew "cmake"
 brew "coreutils"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# GNU compiler collection
+brew "gcc"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
@@ -26,8 +26,6 @@ brew "node"
 brew "firebase-cli"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
-# GNU compiler collection
-brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -58,20 +56,20 @@ brew "maven"
 brew "minikube"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# Platform built on V8 to build network applications
-brew "node@16"
+# Tool for managing OCI containers and pods
+brew "podman"
 # Atlas CLI enables you to manage your MongoDB Atlas
 brew "mongodb-atlas-cli"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
+brew "node@16"
 # High performance message passing library
 brew "open-mpi"
 # Development kit for the Java programming language
 brew "openjdk@11"
 # Python dependency management tool
 brew "pipenv"
-# Tool for managing OCI containers and pods
-brew "podman"
 # Object-relational database system
 brew "postgresql@14"
 # Protocol buffers (Google's data interchange format)
@@ -152,9 +150,7 @@ cask "telegram"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# Video communication and virtual meeting platform
-cask "webex-meetings"
-# Desktop client for WhatsApp
+# Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
 cask "zoom"
