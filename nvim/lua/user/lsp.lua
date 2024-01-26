@@ -48,7 +48,17 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Setup LSPs
 require 'lspconfig'.gopls.setup {
-	capabilities = capabilities
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
 }
 require 'lspconfig'.pylsp.setup {
 	capabilities = capabilities
@@ -95,7 +105,7 @@ local configs = require 'lspconfig.configs'
 if not configs.lua_ls then
 	configs.lua_ls = {
 		default_config = {
-			cmd = { '/usr/local/bin/lua-language-server' },
+			cmd = { '/opt/homebrew/bin/lua-language-server' },
 			filetypes = { 'lua' },
 			root_dir = function(fname)
 				return lspconfig.util.find_git_ancestor(fname)
@@ -156,6 +166,8 @@ vim.g.neoformat_htmldjango_djlint = {
 
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {
+	ensure_installed = { "go", "rust", "python", "javascript", "bash", "typescript", "html", "css",
+		"json", "lua", "cmake", "dockerfile", "toml", "yaml", "tsx", "vim" },
 	highlight = {
 		enable = true,
 	},
@@ -166,4 +178,3 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Test runner
 require('nvim-test').setup {}
-require('dap-go').setup()

@@ -12,15 +12,11 @@ require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
-	-- Debug
-	use 'mfussenegger/nvim-dap'
-
 	-- Lua helpers
 	use "nvim-lua/plenary.nvim"
 
 	-- Test runners
 	use "klen/nvim-test"
-	use "leoluz/nvim-dap-go"
 
 	-- Git integration
 	use {
@@ -57,6 +53,9 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
+
+	-- GitHub Copilot
+	use 'github/copilot.vim'
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
