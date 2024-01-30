@@ -167,7 +167,7 @@ vim.g.neoformat_htmldjango_djlint = {
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {
 	ensure_installed = { "go", "rust", "python", "javascript", "bash", "typescript", "html", "css",
-		"json", "lua", "cmake", "dockerfile", "toml", "yaml", "tsx", "vim" },
+		"json", "lua", "cmake", "dockerfile", "toml", "yaml", "tsx", "vim", "vimdoc" },
 	highlight = {
 		enable = true,
 	},

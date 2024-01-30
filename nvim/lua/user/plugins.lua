@@ -15,6 +15,59 @@ require('packer').startup(function(use)
 	-- Lua helpers
 	use "nvim-lua/plenary.nvim"
 
+	-- DAP
+	use {
+		'mfussenegger/nvim-dap',
+		config = function()
+			local dap, dapui = require("dap"), require("dapui")
+			dapui.setup()
+
+			dap.listeners.after.event_initialized["dapui_config"] = function()
+				dapui.open()
+			end
+
+			dap.listeners.after.event_terminated["dapui_config"] = function()
+				dapui.close()
+			end
+
+			dap.listeners.after.event_exited["dapui_config"] = function()
+				dapui.close()
+			end
+
+			dap.adapters.go_remote = function(cb, config)
+				cb({
+					type = "server",
+					port = config.port,
+					substitutePath = config.substitutePath,
+					executable = {
+						command = "dlv",
+						args = { "connect", "127.0.0.1:" .. config.port },
+					},
+				})
+			end
+
+			dap.configurations["go"] = {
+				{
+					name = "Monolith Docker Debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/go/src/server",
+						},
+					},
+					port = 45653,
+				},
+			}
+		end
+	}
+	use {
+		'rcarriga/nvim-dap-ui',
+		requires = { "mfussenegger/nvim-dap" }
+	}
+
 	-- Test runners
 	use "klen/nvim-test"
 
@@ -71,7 +124,7 @@ require('packer').startup(function(use)
 	use {
 		'kyazdani42/nvim-tree.lua',
 		requires = {
-			'kyazdani42/nvim-web-devicons', -- optional, for file icons
+			'kyazdani42/nvim-web-devicons',
 		}
 	}
 
