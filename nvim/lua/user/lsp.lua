@@ -60,6 +60,16 @@ require 'lspconfig'.gopls.setup {
 		},
 	},
 }
+require 'lspconfig'.rust_analyzer.setup {
+	capabilities = capabilities,
+	settings = {
+		["rust-analyzer"] = {
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
+	},
+}
 require 'lspconfig'.pylsp.setup {
 	capabilities = capabilities
 }
@@ -137,25 +147,12 @@ require 'lspconfig'.lua_ls.setup {
 	},
 }
 
--- Rust tools
-local rt = require("rust-tools")
-
-rt.setup({
-	server = {
-		on_attach = function(_, bufnr)
-			-- Hover actions
-			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-			-- Code action groups
-			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-		end,
-	},
-})
-
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.json\|.html\|.htmldjango\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.json\|.html\|.htmldjango\|.sql\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.html Neoformat]]
+vim.cmd [[autocmd BufWritePre *.sql Neoformat sleek]]
 
 -- Custom format args
 vim.g.neoformat_htmldjango_djlint = {

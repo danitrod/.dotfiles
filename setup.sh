@@ -54,11 +54,11 @@ cargo install cargo-watch
 cargo install trunk wasm-bindgen-cli wasm-pack
 
 # Fish setup
-rm /Users/$(whoami)/.config/fish/config.fish
-ln -s $(pwd)/config.fish /Users/$(whoami)/.config/fish/
+rm "/Users/$(whoami)/.config/fish/config.fish"
+ln -s "$(pwd)/fish/config.fish" "/Users/$(whoami)/.config/fish/"
 fish fish/*
 which fish | sudo tee -a /etc/shells
-chsh -s $(which fish)
+chsh -s "$(which fish)"
 
 # Setup NVM
 mkdir ~/.nvm
