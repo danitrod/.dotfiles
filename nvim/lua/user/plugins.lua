@@ -90,7 +90,7 @@ require('packer').startup(function(use)
 		end
 	}
 	use 'jiangmiao/auto-pairs'
-	use 'tpope/vim-commentary'
+	use 'b3nj5m1n/kommentary'
 	use 'sbdchd/neoformat'
 	use {
 		"folke/todo-comments.nvim",
