@@ -15,5 +15,10 @@
   {
     "key": "cmd+n",
     "command": "explorer.newFile"
+  },
+  {
+    "key": "\\ e",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
   }
 ]

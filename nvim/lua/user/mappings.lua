@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers)
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags)
 vim.keymap.set("n", "<leader>gd", require("telescope.builtin").lsp_definitions)
 vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references)
+vim.keymap.set("n", "gt", require("telescope.builtin").lsp_type_definitions)
 
 vim.keymap.set("n", "<leader>to", require("nvim-tree.api").tree.toggle)
 

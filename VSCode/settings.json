@@ -12,8 +12,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": ["typescript", "javascript"],
   "editor.formatOnSave": true,

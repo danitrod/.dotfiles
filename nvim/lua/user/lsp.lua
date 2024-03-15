@@ -52,7 +52,7 @@ require 'lspconfig'.gopls.setup {
 	settings = {
 		gopls = {
 			completeUnimported = true,
-			usePlaceholders = true,
+			usePlaceholders = false,
 			analyses = {
 				unusedparams = true,
 			},
@@ -148,8 +148,9 @@ require 'lspconfig'.lua_ls.setup {
 }
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.json\|.html\|.htmldjango\|.sql\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.json\|.html\|.htmldjango\|.sql\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
+vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.html Neoformat]]
 vim.cmd [[autocmd BufWritePre *.sql Neoformat sleek]]
@@ -160,6 +161,7 @@ vim.g.neoformat_htmldjango_djlint = {
 	args = { '-', '--reformat', '--indent 2', '--max-blank-lines 1', '--max-line-length 100' },
 	stdin = 1,
 }
+vim.g.neoformat_try_node_exe = 1
 
 -- Setup advanced syntax highlighting
 require 'nvim-treesitter.configs'.setup {
@@ -169,7 +171,7 @@ require 'nvim-treesitter.configs'.setup {
 		enable = true,
 	},
 	rainbow = {
-		enable = true
+		-- enable = true
 	}
 }
 
