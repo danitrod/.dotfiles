@@ -108,6 +108,7 @@ require 'lspconfig'.emmet_ls.setup {
 	filetypes = { "css", "eruby", "html", "htmldjango", "javascript", "javascriptreact", "less", "sass", "scss", "svelte",
 		"pug", "typescriptreact", "vue" },
 }
+require 'lspconfig'.tailwindcss.setup {}
 
 -- custom comments
 require('kommentary.config').configure_language("typescriptreact", {
