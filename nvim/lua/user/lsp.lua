@@ -154,6 +154,17 @@ require 'lspconfig'.lua_ls.setup {
 	},
 }
 
+require("typescript").setup({
+	disable_commands = false, -- prevent the plugin from creating Vim commands
+	debug = false,           -- enable debug logging for commands
+	go_to_source_definition = {
+		fallback = true,       -- fall back to standard LSP definition on failure
+	},
+	server = {               -- pass options to lspconfig's setup method
+		on_attach = ...,
+	},
+})
+
 -- Format on save
 vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.json\|.html\|.htmldjango\|.sql\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
@@ -161,6 +172,7 @@ vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.html Neoformat]]
 vim.cmd [[autocmd BufWritePre *.sql Neoformat sleek]]
+vim.cmd [[autocmd BufWritePre *\(.tsx\|.ts\) TypescriptRemoveUnused]]
 
 -- Custom format args
 vim.g.neoformat_htmldjango_djlint = {
