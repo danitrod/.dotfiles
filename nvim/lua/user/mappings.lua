@@ -7,6 +7,20 @@ vim.keymap.set("n", "<leader>gd", require("telescope.builtin").lsp_definitions)
 vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references)
 vim.keymap.set("n", "gt", require("telescope.builtin").lsp_type_definitions)
 
+-- LSP keymaps
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+	callback = function(ev)
+		local opts = { buffer = ev.buf }
+		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+		vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+		vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+	end,
+})
+
 vim.keymap.set("n", "<leader>to", require("nvim-tree.api").tree.toggle)
 
 vim.cmd [[nnoremap <leader>tf <cmd>NvimTreeFindFile<cr>]]
