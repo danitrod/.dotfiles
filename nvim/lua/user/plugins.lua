@@ -55,10 +55,23 @@ require('packer').startup(function(use)
 					substitutePath = {
 						{
 							from = "${workspaceFolder}",
-							to = "/go/src/server",
+							to = "/go/src/server/server",
 						},
 					},
 					port = 45653,
+				},
+				{
+					name = "Payments Docker Debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/go/src/server/payments",
+						},
+					},
+					port = 4001,
 				},
 			}
 		end
@@ -78,6 +91,7 @@ require('packer').startup(function(use)
 			require('gitsigns').setup()
 		end
 	}
+	use 'sindrets/diffview.nvim'
 
 	-- code styling
 	use 'p00f/nvim-ts-rainbow'
@@ -130,6 +144,9 @@ require('packer').startup(function(use)
 			'kyazdani42/nvim-web-devicons',
 		}
 	}
+
+	-- sort lines and vars
+	use 'sQVe/sort.nvim'
 
 	-- telescope
 	use {
