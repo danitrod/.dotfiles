@@ -41,18 +41,6 @@ ln -s "$(pwd)/.gitconfig" "/Users/$(whoami)/.gitconfig"
 # Use podman instead of docker
 ln -s /usr/local/bin/podman /usr/local/bin/docker
 
-# Install rust and cargo tools
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-rustup target add wasm32-unknown-unknown
-
-# Dev tools
-cargo install cargo-edit
-cargo install diesel_cli
-cargo install cargo-watch
-# WASM
-cargo install trunk wasm-bindgen-cli wasm-pack
-
 # Fish setup
 rm "/Users/$(whoami)/.config/fish/config.fish"
 ln -s "$(pwd)/fish/config.fish" "/Users/$(whoami)/.config/fish/"

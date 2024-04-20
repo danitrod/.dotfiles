@@ -112,6 +112,11 @@ abbr -a yw yarn watch
 abbr -a ys yarn start
 abbr -a yt yarn test
 
+abbr -a pnd pnpm dev
+abbr -a pni pnpm install
+abbr -a pnid pnpm install --save-dev
+abbr -a pnt pnpm test
+
 abbr -a l ls -lah
 abbr -a mkb make build
 abbr -a mkr make run
