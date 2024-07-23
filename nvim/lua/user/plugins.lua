@@ -78,7 +78,7 @@ require('packer').startup(function(use)
 	}
 	use {
 		'rcarriga/nvim-dap-ui',
-		requires = { "mfussenegger/nvim-dap" }
+		requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
 	}
 
 	-- Test runners
@@ -155,7 +155,7 @@ require('packer').startup(function(use)
 	}
 
 	-- bufferlines (tabs)
-	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons' }
+	use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
 	-- Golang
 	use 'fatih/vim-go'
