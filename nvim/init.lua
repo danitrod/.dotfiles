@@ -3,6 +3,7 @@ require "user.plugins"
 require "user.gui"
 require "user.lsp"
 require "user.mappings"
+require "user.folding"
 
 local function open_nvim_tree(data)
 	local directory = vim.fn.isdirectory(data.file) == 1
