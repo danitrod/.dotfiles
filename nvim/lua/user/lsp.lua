@@ -74,7 +74,8 @@ require 'lspconfig'.pylsp.setup {
 	capabilities = capabilities
 }
 require 'lspconfig'.bashls.setup {
-	capabilities = capabilities
+	capabilities = capabilities,
+	filetypes = { "bash", "sh" },
 }
 require 'lspconfig'.dockerls.setup {
 	capabilities = capabilities
@@ -199,3 +200,13 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Test runner
 require('nvim-test').setup {}
+
+-- Set dotenv filetype
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { ".env.*", "*.env" },
+	callback = function()
+		vim.bo.filetype = "dotenv"
+	end,
+})
+
+vim.treesitter.language.register('bash', 'dotenv')
