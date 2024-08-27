@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
 	view = {
-		side = "right",
+		side = "left",
 		adaptive_size = true,
 	},
 	sort_by = "case_sensitive",

@@ -60,19 +60,6 @@ require('packer').startup(function(use)
 					},
 					port = 45653,
 				},
-				{
-					name = "Payments Docker Debug",
-					request = "attach",
-					type = "go_remote",
-					mode = "remote",
-					substitutePath = {
-						{
-							from = "${workspaceFolder}",
-							to = "/go/src/server/payments",
-						},
-					},
-					port = 4001,
-				},
 			}
 		end
 	}

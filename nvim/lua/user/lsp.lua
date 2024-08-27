@@ -112,10 +112,15 @@ require 'lspconfig'.emmet_ls.setup {
 require 'lspconfig'.tailwindcss.setup {}
 
 -- custom comments
-require('kommentary.config').configure_language("typescriptreact", {
+local kommentary = require('kommentary.config')
+kommentary.configure_language("typescriptreact", {
 	multi_line_comment_strings = { "{/*", "*/}" },
 	prefer_multi_line_comments = true,
 	prefer_single_line_comments = false,
+})
+kommentary.configure_language('dotenv', {
+	single_line_comment_string = "#",
+	prefer_single_line_comments = true,
 })
 
 -- For some reason lua_ls is not configured, add it manually
