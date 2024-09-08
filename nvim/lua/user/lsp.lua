@@ -173,12 +173,10 @@ require("typescript").setup({
 })
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *.md Neoformat]]
-vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\) Neoformat]]
-vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\) Neoformat prettier]]
-vim.cmd [[autocmd BufWritePre *.json Neoformat prettier]]
-vim.cmd [[autocmd BufWritePre *.html Neoformat]]
+vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\|.css\|.html\) Neoformat]]
+vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\|.json\) Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.proto !protolint lint -fix %]]
 vim.cmd [[autocmd BufWritePre *.sql Neoformat sleek]]
 vim.cmd [[autocmd BufWritePre *\(.tsx\|.ts\) TypescriptRemoveUnused]]
