@@ -78,10 +78,12 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
 )
 
 -- Debug
-vim.keymap.set("n", "<leader>gbk", "<cmd>GoDebugBreakpoint<cr>")
-vim.keymap.set("n", "<leader>gtf", "<cmd>GoTestFile<cr>")
-vim.keymap.set("n", "<leader>gdt", "<cmd>GoDebugTest<cr>")
-vim.keymap.set("n", "<leader>gdc", "<cmd>GoDebugContinue<cr>")
+vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>")
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>")
+vim.keymap.set("n", "<leader>dt", "<cmd>DapTerminate<cr>")
+vim.keymap.set("n", "<leader>ds", "<cmd>DapStepOver<cr>")
+vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>")
+vim.keymap.set("n", "<leader>do", "<cmd>DapStepOut<cr>")
 
 -- Go
 vim.keymap.set("n", "<leader>gat", "<cmd>GoAddTags<cr>")
