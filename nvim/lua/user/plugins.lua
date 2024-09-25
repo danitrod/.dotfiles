@@ -60,6 +60,19 @@ require('packer').startup(function(use)
 					},
 					port = 45653,
 				},
+				{
+					name = "Papyrus Docker Debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/go/src",
+						},
+					},
+					port = 4111,
+				},
 			}
 		end
 	}
