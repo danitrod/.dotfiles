@@ -73,6 +73,19 @@ require('packer').startup(function(use)
 					},
 					port = 4111,
 				},
+				{
+					name = "Rating Engine Docker Debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/go/src",
+						},
+					},
+					port = 4099,
+				},
 			}
 		end
 	}
