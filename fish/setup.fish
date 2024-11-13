@@ -10,3 +10,6 @@ fish_add_path /Users/(whoami)/go/bin/
 
 # Add GOPATH variable
 set -Ux GOPATH /Users/(whoami)/go
+
+# Enable Docker buildkit
+set -Ux DOCKER_BUILDKIT 1
