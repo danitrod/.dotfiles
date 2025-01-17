@@ -104,6 +104,9 @@ require 'lspconfig'.bufls.setup {
 require 'lspconfig'.html.setup {
 	capabilities = capabilities
 }
+require 'lspconfig'.clangd.setup {
+	capabilities = capabilities
+}
 require 'lspconfig'.emmet_ls.setup {
 	capabilities = capabilities,
 	filetypes = { "css", "eruby", "html", "htmldjango", "javascript", "javascriptreact", "less", "sass", "scss", "svelte",

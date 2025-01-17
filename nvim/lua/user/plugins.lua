@@ -35,13 +35,15 @@ require('packer').startup(function(use)
 			end
 
 			dap.adapters.go_remote = function(cb, config)
+				local host = config.host or "127.0.0.1"
 				cb({
 					type = "server",
 					port = config.port,
+					host = host,
 					substitutePath = config.substitutePath,
 					executable = {
 						command = "dlv",
-						args = { "connect", "127.0.0.1:" .. config.port },
+						args = { "connect", host .. ":" .. config.port },
 					},
 				})
 			end
@@ -74,7 +76,7 @@ require('packer').startup(function(use)
 					port = 4111,
 				},
 				{
-					name = "Rating Engine Docker Debug",
+					name = "Rating Engine Local Debug",
 					request = "attach",
 					type = "go_remote",
 					mode = "remote",
@@ -85,6 +87,33 @@ require('packer').startup(function(use)
 						},
 					},
 					port = 4099,
+				},
+				{
+					name = "Rating Engine emPAS instance debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/go/src",
+						},
+					},
+					host = "52.72.7.127",
+					port = 4099,
+				},
+				{
+					name = "Web Gateway local debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/tmp/gobuild",
+						},
+					},
+					port = 45652,
 				},
 			}
 		end
