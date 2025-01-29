@@ -218,7 +218,14 @@ require('packer').startup(function(use)
 
 	-- Folding
 	use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+	-- Notifications
+	use 'rcarriga/nvim-notify'
+
+	-- Custom cmd prompt
+	use { 'folke/noice.nvim', requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } }
 end)
+
 
 -- install new plugins
 vim.cmd [[
