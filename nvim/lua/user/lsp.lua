@@ -113,6 +113,28 @@ require 'lspconfig'.emmet_ls.setup {
 		"pug", "typescriptreact", "vue" },
 }
 require 'lspconfig'.tailwindcss.setup {}
+require 'lspconfig'.vacuum.setup {}
+
+-- OpenAPI file type
+vim.filetype.add {
+	pattern = {
+		['.*openapi.*%.ya?ml'] = 'yaml.openapi',
+		['.*openapi.*%.json'] = 'json.openapi',
+		['.*oapi.*%.ya?ml'] = 'yaml.openapi',
+		['.*oapi.*%.json'] = 'json.openapi',
+	},
+}
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = "*.yaml,*.yml",
+	callback = function()
+		local first_line = vim.api.nvim_buf_get_lines(0, 0, 1, false)[1] or ""
+		if first_line:match("^openapi") then
+			vim.bo.filetype = "yaml.openapi"
+		end
+	end,
+})
+
 
 -- custom comments
 local kommentary = require('kommentary.config')
@@ -181,7 +203,7 @@ vim.cmd [[autocmd BufWritePre *.md Neoformat]]
 vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\|.css\|.html\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\|.json\) Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.proto !protolint lint -fix %]]
-vim.cmd [[autocmd BufWritePre *.sql Neoformat sleek]]
+-- vim.cmd [[autocmd BufWritePre *.sql Neoformat pg_format]]
 vim.cmd [[autocmd BufWritePre *\(.tsx\|.ts\) TypescriptRemoveUnused]]
 
 -- Custom format args
