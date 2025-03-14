@@ -114,6 +114,9 @@ require 'lspconfig'.emmet_ls.setup {
 }
 require 'lspconfig'.tailwindcss.setup {}
 require 'lspconfig'.vacuum.setup {}
+require 'lspconfig'.lemminx.setup {
+	capabilities = capabilities
+}
 
 -- OpenAPI file type
 vim.filetype.add {
