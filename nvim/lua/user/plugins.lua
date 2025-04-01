@@ -205,9 +205,6 @@ require('packer').startup(function(use)
 	-- Rust
 	use 'mrcjkb/rustaceanvim'
 
-	-- TypeScript
-	use 'jose-elias-alvarez/typescript.nvim'
-
 	-- Markdown
 	use({
 		"iamcco/markdown-preview.nvim",

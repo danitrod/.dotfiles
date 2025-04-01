@@ -83,7 +83,7 @@ require 'lspconfig'.dockerls.setup {
 require 'lspconfig'.jsonls.setup {
 	capabilities = capabilities
 }
-require 'lspconfig'.tsserver.setup {
+require 'lspconfig'.ts_ls.setup {
 	capabilities = capabilities
 }
 require 'lspconfig'.eslint.setup {
@@ -98,7 +98,7 @@ require 'lspconfig'.cmake.setup {
 require 'lspconfig'.taplo.setup {
 	capabilities = capabilities
 }
-require 'lspconfig'.bufls.setup {
+require 'lspconfig'.buf_ls.setup {
 	capabilities = capabilities
 }
 require 'lspconfig'.html.setup {
@@ -188,17 +188,6 @@ require 'lspconfig'.lua_ls.setup {
 		},
 	},
 }
-
-require("typescript").setup({
-	disable_commands = false, -- prevent the plugin from creating Vim commands
-	debug = false,           -- enable debug logging for commands
-	go_to_source_definition = {
-		fallback = true,       -- fall back to standard LSP definition on failure
-	},
-	server = {               -- pass options to lspconfig's setup method
-		on_attach = ...,
-	},
-})
 
 -- Format on save
 vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
