@@ -71,7 +71,8 @@ require 'lspconfig'.rust_analyzer.setup {
 	},
 }
 require 'lspconfig'.pylsp.setup {
-	capabilities = capabilities
+	capabilities = capabilities,
+	cmd = { "./.venv/bin/pylsp" }
 }
 require 'lspconfig'.bashls.setup {
 	capabilities = capabilities,
