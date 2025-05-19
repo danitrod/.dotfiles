@@ -230,3 +230,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 vim.treesitter.language.register('bash', 'dotenv')
+
+-- MDX
+vim.filetype.add({ extension = { mdx = "mdx" } })
+vim.treesitter.language.register("markdown", "mdx")
