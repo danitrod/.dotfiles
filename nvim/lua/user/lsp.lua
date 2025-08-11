@@ -119,6 +119,16 @@ require 'lspconfig'.lemminx.setup {
 	capabilities = capabilities
 }
 
+-- Exclude Go test files from reference search
+require('telescope').setup {
+	pickers = {
+		lsp_references = {
+			file_ignore_patterns = { ".*_test%.go" },
+		}
+	}
+}
+
+
 -- OpenAPI file type
 vim.filetype.add {
 	pattern = {
