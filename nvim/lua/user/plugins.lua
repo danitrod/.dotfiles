@@ -115,6 +115,19 @@ require('packer').startup(function(use)
 					},
 					port = 45652,
 				},
+				{
+					name = "MS Integration debug",
+					request = "attach",
+					type = "go_remote",
+					mode = "remote",
+					substitutePath = {
+						{
+							from = "${workspaceFolder}",
+							to = "/tmp/gobuild",
+						},
+					},
+					port = 4123,
+				},
 			}
 		end
 	}

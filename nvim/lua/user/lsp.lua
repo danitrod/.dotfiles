@@ -123,7 +123,10 @@ require 'lspconfig'.lemminx.setup {
 require('telescope').setup {
 	pickers = {
 		lsp_references = {
-			file_ignore_patterns = { ".*_test%.go" },
+			file_ignore_patterns = { ".*_test%.go", ".*_mock%.go" },
+		},
+		live_grep = {
+			file_ignore_patterns = { ".*_test%.go", ".*_mock%.go" },
 		}
 	}
 }
