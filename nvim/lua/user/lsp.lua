@@ -204,8 +204,8 @@ require 'lspconfig'.lua_ls.setup {
 }
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
-vim.cmd [[autocmd BufWritePre *.md Neoformat]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.mdx\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.mdx\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\|.css\|.html\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\|.json\) Neoformat prettier]]
 vim.cmd [[autocmd BufWritePre *.proto !protolint lint -fix %]]
@@ -247,3 +247,11 @@ vim.treesitter.language.register('bash', 'dotenv')
 -- MDX
 vim.filetype.add({ extension = { mdx = "mdx" } })
 vim.treesitter.language.register("markdown", "mdx")
+
+vim.g.neoformat_mdx_prettier = {
+	exe = "prettier",
+	args = { "--stdin-filepath", "%:p" },
+	stdin = 1,
+}
+
+vim.g.neoformat_enabled_mdx = { "prettier" }
