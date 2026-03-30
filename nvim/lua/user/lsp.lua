@@ -250,7 +250,7 @@ vim.treesitter.language.register("markdown", "mdx")
 
 vim.g.neoformat_mdx_prettier = {
 	exe = "prettier",
-	args = { "--stdin-filepath", "%:p" },
+	args = { "--stdin-filepath", "%:p", "--print-width", "100", "--prose-wrap", "always" },
 	stdin = 1,
 }
 
