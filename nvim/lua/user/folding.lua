@@ -12,8 +12,11 @@ capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true
 }
-for _, ls in ipairs(vim.lsp.config._configs) do
-	vim.lsp.config(ls, { capabilities = capabilities })
-	vim.lsp.enable(ls)
+
+for ls, _ in pairs(vim.lsp.config._configs) do
+	if ls ~= "." then
+		vim.lsp.enable(ls)
+	end
 end
+
 require('ufo').setup()

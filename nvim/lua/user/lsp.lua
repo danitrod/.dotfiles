@@ -60,7 +60,6 @@ vim.lsp.config('gopls', {
 		},
 	},
 })
-vim.lsp.enable('gopls')
 
 vim.lsp.config('rust_analyzer', {
 	capabilities = capabilities,
@@ -207,7 +206,6 @@ vim.lsp.config('lua_ls', {
 		},
 	},
 })
-vim.lsp.enable('lua_ls')
 
 
 -- Format on save
