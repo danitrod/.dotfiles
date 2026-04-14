@@ -12,11 +12,8 @@ capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true
 }
-local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
-for _, ls in ipairs(language_servers) do
-	require('lspconfig')[ls].setup({
-		capabilities = capabilities
-		-- you can add other fields for setting up lsp server in this table
-	})
+for _, ls in ipairs(vim.lsp.config._configs) do
+	vim.lsp.config(ls, { capabilities = capabilities })
+	vim.lsp.enable(ls)
 end
 require('ufo').setup()

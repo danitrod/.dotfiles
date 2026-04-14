@@ -47,7 +47,7 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Setup LSPs
-require 'lspconfig'.gopls.setup {
+vim.lsp.config('gopls', {
 	capabilities = capabilities,
 	settings = {
 		gopls = {
@@ -59,8 +59,10 @@ require 'lspconfig'.gopls.setup {
 			staticcheck = true,
 		},
 	},
-}
-require 'lspconfig'.rust_analyzer.setup {
+})
+vim.lsp.enable('gopls')
+
+vim.lsp.config('rust_analyzer', {
 	capabilities = capabilities,
 	settings = {
 		["rust-analyzer"] = {
@@ -69,58 +71,75 @@ require 'lspconfig'.rust_analyzer.setup {
 			},
 		},
 	},
-}
-require 'lspconfig'.pylsp.setup {
+})
+
+vim.lsp.config('pylsp', {
 	capabilities = capabilities,
 	cmd = { "./.venv/bin/pylsp" }
-}
-require 'lspconfig'.bashls.setup {
+})
+
+vim.lsp.config('bashls', {
 	capabilities = capabilities,
 	filetypes = { "bash", "sh" },
-}
-require 'lspconfig'.dockerls.setup {
+})
+
+vim.lsp.config('dockerls', {
 	capabilities = capabilities
-}
-require 'lspconfig'.jsonls.setup {
+})
+
+vim.lsp.config('jsonls', {
 	capabilities = capabilities
-}
-require 'lspconfig'.ts_ls.setup {
+})
+
+vim.lsp.config('ts_ls', {
 	capabilities = capabilities
-}
-require 'lspconfig'.eslint.setup {
+})
+
+vim.lsp.config('eslint', {
 	capabilities = capabilities
-}
-require 'lspconfig'.marksman.setup {
+})
+
+vim.lsp.config('marksman', {
 	capabilities = capabilities
-}
-require 'lspconfig'.cmake.setup {
+})
+
+vim.lsp.config('cmake', {
 	capabilities = capabilities
-}
-require 'lspconfig'.taplo.setup {
+})
+
+vim.lsp.config('taplo', {
 	capabilities = capabilities
-}
-require 'lspconfig'.buf_ls.setup {
+})
+
+vim.lsp.config('buf_ls', {
 	capabilities = capabilities
-}
-require 'lspconfig'.html.setup {
+})
+
+vim.lsp.config('html', {
 	capabilities = capabilities
-}
-require 'lspconfig'.clangd.setup {
+})
+
+vim.lsp.config('clangd', {
 	capabilities = capabilities
-}
-require 'lspconfig'.emmet_ls.setup {
+})
+
+vim.lsp.config('emmet_ls', {
 	capabilities = capabilities,
 	filetypes = { "css", "eruby", "html", "htmldjango", "javascript", "javascriptreact", "less", "sass", "scss", "svelte",
 		"pug", "typescriptreact", "vue" },
-}
-require 'lspconfig'.tailwindcss.setup {}
-require 'lspconfig'.vacuum.setup {}
-require 'lspconfig'.lemminx.setup {
+})
+
+vim.lsp.config('tailwindcss', {})
+
+vim.lsp.config('vacuum', {})
+
+vim.lsp.config('lemminx', {
 	capabilities = capabilities
-}
+})
+
 
 -- Exclude Go test files from reference search
-require('telescope').setup {
+vim.lsp.config('.', {
 	pickers = {
 		lsp_references = {
 			file_ignore_patterns = { ".*_test%.go", ".*_mock%.go" },
@@ -129,7 +148,8 @@ require('telescope').setup {
 			file_ignore_patterns = { ".*_test%.go", ".*_mock%.go" },
 		}
 	}
-}
+})
+
 
 
 -- OpenAPI file type
@@ -165,22 +185,7 @@ kommentary.configure_language('dotenv', {
 	prefer_single_line_comments = true,
 })
 
--- For some reason lua_ls is not configured, add it manually
-local lspconfig = require 'lspconfig'
-local configs = require 'lspconfig.configs'
-if not configs.lua_ls then
-	configs.lua_ls = {
-		default_config = {
-			cmd = { '/opt/homebrew/bin/lua-language-server' },
-			filetypes = { 'lua' },
-			root_dir = function(fname)
-				return lspconfig.util.find_git_ancestor(fname)
-			end,
-			settings = {},
-		},
-	}
-end
-require 'lspconfig'.lua_ls.setup {
+vim.lsp.config('lua_ls', {
 	settings = {
 		Lua = {
 			runtime = {
@@ -201,14 +206,17 @@ require 'lspconfig'.lua_ls.setup {
 			},
 		},
 	},
-}
+})
+vim.lsp.enable('lua_ls')
+
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre *\(.md\|.mdx\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\)\@<! lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *\(.md\|.mdx\|.tsx\|.jsx\|.js\|.ts\|.css\|.json\|.proto\|.html\|.htmldjango\|.sql\|.yml\|.yaml\|.xml\)\@<! lua vim.lsp.buf.format()]]
 vim.cmd [[autocmd BufWritePre *\(.md\|.mdx\) Neoformat]]
 vim.cmd [[autocmd BufWritePre *\(.tsx\|.jsx\|.ts\|.js\|.css\|.html\) Neoformat]]
-vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\|.json\) Neoformat prettier]]
-vim.cmd [[autocmd BufWritePre *.proto !protolint lint -fix %]]
+-- vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\|.json\) Neoformat prettier]]
+-- vim.cmd [[autocmd BufWritePre *\(.yml\|.yaml\) Neoformat prettier]]
+-- vim.cmd [[autocmd BufWritePre *.proto !protolint lint -fix %]]
 -- vim.cmd [[autocmd BufWritePre *.sql Neoformat pg_format]]
 
 -- Custom format args
